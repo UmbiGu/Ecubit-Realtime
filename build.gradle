@@ -1,0 +1,69 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.4.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'it.almaviva.nerds.services'
+version = '0.0.1'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-aop')
+    compile('org.springframework.boot:spring-boot-starter-cache')
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('org.springframework.boot:spring-boot-starter-data-rest')
+    compile('org.springframework.boot:spring-boot-starter-hateoas')
+    compile('org.springframework.boot:spring-boot-starter-jersey')
+    compile('org.springframework.boot:spring-boot-starter-integration')
+    compile('org.springframework.boot:spring-boot-starter-validation')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.data:spring-data-rest-hal-browser')
+    compile('org.springframework.retry:spring-retry')
+    compile('org.springframework.session:spring-session-core')
+    runtime('org.springframework.boot:spring-boot-devtools')
+    compile "org.springframework.integration:spring-integration-xmpp"
+    runtime('com.h2database:h2')
+    runtime('mysql:mysql-connector-java')
+    compile('com.google.code.gson:gson:2.8.4')
+    compile files('libs/ejabberd-api-0.0.10.jar')
+    compileOnly('org.springframework.boot:spring-boot-configuration-processor')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('org.springframework.restdocs:spring-restdocs-mockmvc')
+    testCompile('org.springframework.security:spring-security-test')
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+}
+
+war {
+    baseName = 'services'
+    version = '0.0.1'
+    enabled = true
+
+}
+
+jar {
+    baseName = 'services'
+    version = '0.0.1'
+    enabled = true
+}
+
+bootJar {
+    launchScript()
+}
