@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.integration:spring-integration-xmpp:5.0.7.RELEASE" external-system-id="GRADLE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.integration/spring-integration-xmpp/5.0.7.RELEASE/41599adecffffff6ecb0b63d18f72e46232d9010/spring-integration-xmpp-5.0.7.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.integration/spring-integration-xmpp/5.0.7.RELEASE/34fdbc4d9fa24397cb061250a022540c454bb3c9/spring-integration-xmpp-5.0.7.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
