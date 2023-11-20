@@ -1,13 +1,16 @@
 package it.ecubit.xmpp.services.controller;
 
 import it.ecubit.xmpp.services.exception.ExceptionGeneric;
+import it.ecubit.xmpp.services.rest.entity.GetOfflineCount;
 import it.ecubit.xmpp.services.rest.entity.User;
+import it.ecubit.xmpp.services.rest.entity.room.CreateRoom;
 import it.ecubit.xmpp.services.rest.wrapperEntity.NumUserConnected;
+import it.ecubit.xmpp.services.rest.wrapperEntity.ResponseOfflineCount;
+import it.ecubit.xmpp.services.rest.wrapperEntity.UserInfo;
 import it.ecubit.xmpp.services.service.EjabberdApiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
-import retrofit2.http.GET;
 
 import java.io.IOException;
 import java.util.List;
@@ -25,26 +28,47 @@ public class UserRestServiceController {
 
     @Value("${xmpp.ejabberd.multicast}")
     private String multicast;
-
+//Registrazione di un utente
     @CrossOrigin
     @PostMapping("/registerUser") // Map ONLY GET Requests
     public User registerUser(@RequestBody User user) throws ExceptionGeneric, IOException {
     ejabberdApiService.registerUser(user);
     return user;
     }
-
+//Lista degli utenti registrati
     @CrossOrigin
     @GetMapping("/getUsers")
     public List<User> getUsers() throws IOException {
         List<User> list = ejabberdApiService.getUsers();
         return list;
     }
-
+//Numero degli utenti connessi
     @CrossOrigin
     @GetMapping("/getConnectedUsersNumbers")
     public NumUserConnected getConnectedUsersNumber() throws IOException {
         NumUserConnected numUserConnected = ejabberdApiService.getConnectedUsersNumber();
         return numUserConnected;
+    }
+//Lista degli utenti connessi
+    @CrossOrigin
+    @GetMapping("/getUserInfo")
+    public List<UserInfo> getUserInfo() throws IOException {
+        List<UserInfo> userInfoList = ejabberdApiService.getUserInfo();
+        return userInfoList;
+    }
+    //Numero dei messaggi pendenti per quell'utente
+    @CrossOrigin
+    @PostMapping("/getOfflineCount")
+    public ResponseOfflineCount getOfflineCount(@RequestBody GetOfflineCount user) throws IOException {
+        ResponseOfflineCount responseOfflineCount = ejabberdApiService.getOfflineCount(user);
+        return responseOfflineCount;
+    }
+    @CrossOrigin
+    @PostMapping("/createRoom")
+    public String createRoom(@RequestBody CreateRoom room) throws IOException {
+        String response = ejabberdApiService.createRoom(room);
+        return response;
+
     }
 
 //    @CrossOrigin
@@ -88,4 +112,3 @@ public class UserRestServiceController {
 //        return "Exception" + e.getMessage();
 //    }
 }
-

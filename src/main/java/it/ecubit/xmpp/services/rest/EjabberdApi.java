@@ -27,7 +27,6 @@ public interface EjabberdApi {
     @POST("registered_users")
     public Call<List> getUsers(@Body Host host);
 
-
     @GET("connected_users_number")
     public Call<NumUserConnected> getConnectedUsersNumber();
 
