@@ -47,4 +47,8 @@ public class EjabberdApiService {
     public String accountCheck(UserCheck userCheck) throws IOException {
         return EjabberdClient.getInstance(host).accountCheck(userCheck);
     }
+
+    public String passwordCheck(User user) throws IOException {
+        return EjabberdClient.getInstance(host).passwordCheck(user);
+    }
 }

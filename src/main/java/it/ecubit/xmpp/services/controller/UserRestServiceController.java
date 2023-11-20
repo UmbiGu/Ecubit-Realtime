@@ -77,6 +77,12 @@ public class UserRestServiceController {
     public String accountCheck(@RequestBody UserCheck userCheck) throws ExceptionGeneric, IOException{
         return ejabberdApiService.accountCheck(userCheck);
     }
+
+    @CrossOrigin
+    @PostMapping("/check_password")
+    public String passwordCheck(@RequestBody User user) throws ExceptionGeneric, IOException{
+        return ejabberdApiService.passwordCheck(user);
+    }
 //    @CrossOrigin
 //    @PostMapping(path = "/users/broadcast") // Map ONLY GET Requests
 //    public @ResponseBody
