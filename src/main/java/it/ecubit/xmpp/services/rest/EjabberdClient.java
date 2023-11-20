@@ -127,7 +127,7 @@ public class EjabberdClient {
 	Response<String> createRoomResponse = create.execute();
 	String createStatus = createRoomResponse.body();
 	if (createStatus.equals("0"))
-		System.out.println("Room created");
+		System.out.println("Room " + createRoom.getName() + " created");
 	return createStatus;
 }
 	
@@ -137,10 +137,11 @@ public class EjabberdClient {
 		return getRoomOccupantsResponse.body();
 	}
 
-	public String accountCheck() throws IOException{
-		UserCheck userCheck = new UserCheck("ugo", "localhost");
+	public String accountCheck(UserCheck userCheck) throws IOException{
 		Call<String> userCheckApi = ejabberdApi.accountCheck(userCheck);
 		Response<String> userCheckResponse = userCheckApi.execute();
+		if (userCheckResponse.body().equals("0"))
+			System.out.println("User " + userCheck.getUser() + " exists!");
 		return userCheckResponse.body();
 	}
 

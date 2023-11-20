@@ -5,6 +5,7 @@ import it.ecubit.xmpp.services.exception.ExceptionGeneric;
 import it.ecubit.xmpp.services.rest.EjabberdClient;
 import it.ecubit.xmpp.services.rest.entity.GetOfflineCount;
 import it.ecubit.xmpp.services.rest.entity.User;
+import it.ecubit.xmpp.services.rest.entity.UserCheck;
 import it.ecubit.xmpp.services.rest.entity.room.CreateRoom;
 import it.ecubit.xmpp.services.rest.entity.room.GetRoomOccupants;
 import it.ecubit.xmpp.services.rest.entity.room.RoomOccupants;
@@ -43,4 +44,7 @@ public class EjabberdApiService {
         return EjabberdClient.getInstance(host).getRoomOccupants(getRoomOccupants);
     }
 
+    public String accountCheck(UserCheck userCheck) throws IOException {
+        return EjabberdClient.getInstance(host).accountCheck(userCheck);
+    }
 }

@@ -3,6 +3,7 @@ package it.ecubit.xmpp.services.controller;
 import it.ecubit.xmpp.services.exception.ExceptionGeneric;
 import it.ecubit.xmpp.services.rest.entity.GetOfflineCount;
 import it.ecubit.xmpp.services.rest.entity.User;
+import it.ecubit.xmpp.services.rest.entity.UserCheck;
 import it.ecubit.xmpp.services.rest.entity.room.CreateRoom;
 import it.ecubit.xmpp.services.rest.entity.room.GetRoomOccupants;
 import it.ecubit.xmpp.services.rest.entity.room.RoomOccupants;
@@ -69,6 +70,12 @@ public class UserRestServiceController {
     @PostMapping("/getRoomOccupants")
     public List<RoomOccupants> getRoomOccupants(@RequestBody GetRoomOccupants getRoomOccupants) throws ExceptionGeneric, IOException{
         return ejabberdApiService.getRoomOccupants(getRoomOccupants);
+    }
+
+    @CrossOrigin
+    @PostMapping("/check_account")
+    public String accountCheck(@RequestBody UserCheck userCheck) throws ExceptionGeneric, IOException{
+        return ejabberdApiService.accountCheck(userCheck);
     }
 //    @CrossOrigin
 //    @PostMapping(path = "/users/broadcast") // Map ONLY GET Requests
