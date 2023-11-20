@@ -56,3 +56,10 @@
                                                                                                                "src/mod_http_api.erl"},
                                                                                                               {line,
                                                                                                                190}]}]
+2023-11-20 09:53:17.612249+00:00 [critical] <0.179.0>@ejabberd_app:start/2:72 Failed to start ejabberd application: Invalid value of option listen->5->request_handlers->'module': Module 'ejabberd_c2s' doesn't export function socket_handoff/3
+2023-11-20 09:53:23.354262+00:00 [critical] <0.179.0>@ejabberd_app:start/2:72 Failed to start ejabberd application: Invalid value of option listen->5->request_handlers->'module': Module 'ejabberd_c2s' doesn't export function socket_handoff/3
+2023-11-20 09:53:33.712668+00:00 [critical] <0.179.0>@ejabberd_app:start/2:72 Failed to start ejabberd application: Invalid value of option listen->5->request_handlers->'module': Module 'ejabberd_c2s' doesn't export function socket_handoff/3
+2023-11-20 09:53:37.836408+00:00 [critical] <0.179.0>@ejabberd_app:start/2:72 Failed to start ejabberd application: Invalid value of option listen->5->request_handlers->'module': Module 'ejabberd_c2s' doesn't export function socket_handoff/3
+2023-11-20 09:54:12.057001+00:00 [critical] <0.179.0>@ejabberd_app:start/2:72 Failed to start ejabberd application: Invalid value of option listen->5: Duplicated option: module
+2023-11-20 09:58:02.938691+00:00 [critical] <0.179.0>@ejabberd_app:start/2:72 Failed to start ejabberd application: Invalid value of option listen->1->dhfile: Failed to read file '/etc/ssl/ejabberd/dh1024.pem': no such file or directory
+2023-11-20 09:58:32.642789+00:00 [critical] <0.179.0>@ejabberd_app:start/2:72 Failed to start ejabberd application: Invalid value of option listen->1->dhfile: Failed to read file '/etc/ssl/ejabberd/dh1024.pem': no such file or directory

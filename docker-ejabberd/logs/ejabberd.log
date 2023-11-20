@@ -1666,3 +1666,236 @@
 2023-11-17 16:06:19.225660+00:00 [info] <0.175.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:1883 for mod_mqtt
 2023-11-17 16:06:19.228467+00:00 [info] <0.1290.0>@ejabberd_c2s:process_terminated/2:295 (unknown) Closing c2s session for admin@localhost/xmppServices: Stream closed by local host: system-shutdown
 2023-11-17 16:06:19.381405+00:00 [info] <0.175.0>@ejabberd_app:stop/1:112 ejabberd 23.10.0 is stopped in the node ejabberd@localhost
+2023-11-20 09:43:17.481990+00:00 [info] <0.179.0>@ejabberd_config:load/1:82 Loading configuration from /opt/ejabberd/conf/ejabberd.yml
+2023-11-20 09:43:17.739456+00:00 [info] <0.179.0>@ejabberd_config:load/1:89 Configuration loaded successfully
+2023-11-20 09:43:17.849119+00:00 [info] <0.431.0>@ejabberd_systemd:init/1:94 Got no NOTIFY_SOCKET, notifications disabled
+2023-11-20 09:43:17.855527+00:00 [info] <0.434.0>@translate:load/2:127 Building language translation cache
+2023-11-20 09:43:17.942940+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia ram table 'ejabberd_commands'
+2023-11-20 09:43:17.971350+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia ram table 'route'
+2023-11-20 09:43:17.974732+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia ram table 'route_multicast'
+2023-11-20 09:43:17.980406+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia ram table 'session'
+2023-11-20 09:43:17.982234+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia ram table 'session_counter'
+2023-11-20 09:43:17.986623+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia ram table 's2s'
+2023-11-20 09:43:17.988574+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia ram table 'temporarily_blocked'
+2023-11-20 09:43:17.992524+00:00 [info] <0.430.0>@gen_mod:start_modules/0:141 Loading modules for localhost
+2023-11-20 09:43:17.994158+00:00 [warning] <0.430.0>@mod_mam:start/2:113 Mnesia backend for mod_mam is not recommended: it's limited to 2GB and often gets corrupted when reaching this limit. SQL backend is recommended. Namely, for small servers SQLite is a preferred choice because it's very easy to configure.
+2023-11-20 09:43:17.994251+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc_only table 'archive_msg'
+2023-11-20 09:43:17.997283+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc_only table 'archive_prefs'
+2023-11-20 09:43:18.003695+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc_only table 'motd'
+2023-11-20 09:43:18.007916+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc_only table 'motd_users'
+2023-11-20 09:43:18.015628+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc_only table 'offline_msg'
+2023-11-20 09:43:18.037746+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc_only table 'caps_features'
+2023-11-20 09:43:18.042480+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia ram table 'pubsub_last_item'
+2023-11-20 09:43:18.047651+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc table 'pubsub_index'
+2023-11-20 09:43:18.053811+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc table 'pubsub_node'
+2023-11-20 09:43:18.056463+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc table 'pubsub_state'
+2023-11-20 09:43:18.058886+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc_only table 'pubsub_item'
+2023-11-20 09:43:18.066950+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc table 'pubsub_orphan'
+2023-11-20 09:43:18.069468+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia ram table 'mod_register_ip'
+2023-11-20 09:43:18.072084+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc_only table 'roster'
+2023-11-20 09:43:18.077115+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc_only table 'roster_version'
+2023-11-20 09:43:18.093852+00:00 [info] <0.681.0>@mod_stun_disco:parse_listener/1:616 Going to offer STUN/TURN service: 172.20.0.3:3478 (udp)
+2023-11-20 09:43:18.098559+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc table 'sr_group'
+2023-11-20 09:43:18.102373+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc table 'sr_user'
+2023-11-20 09:43:18.118339+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc table 'muc_room'
+2023-11-20 09:43:18.121421+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc table 'muc_registered'
+2023-11-20 09:43:18.124140+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia ram table 'muc_online_room'
+2023-11-20 09:43:18.125748+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc_only table 'private_storage'
+2023-11-20 09:43:18.133886+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc_only table 'privacy'
+2023-11-20 09:43:18.146314+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc_only table 'vcard'
+2023-11-20 09:43:18.149312+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc table 'vcard_search'
+2023-11-20 09:43:18.162523+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia ram table 'bosh'
+2023-11-20 09:43:18.164705+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc_only table 'push_session'
+2023-11-20 09:43:18.172584+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc_only table 'last_activity'
+2023-11-20 09:43:18.181100+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc_only table 'mqtt_pub'
+2023-11-20 09:43:18.185218+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia ram table 'mqtt_session'
+2023-11-20 09:43:18.188235+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia ram table 'mqtt_sub'
+2023-11-20 09:43:18.195159+00:00 [info] <0.786.0>@mod_mqtt:init_topic_cache/2:644 Building MQTT cache for localhost, this may take a while
+2023-11-20 09:43:18.198588+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia ram table 'bytestream'
+2023-11-20 09:43:18.200635+00:00 [warning] <0.812.0>@ejabberd_captcha:get_prog_name/0:444 The option captcha_cmd is not configured, but some module wants to use the CAPTCHA feature.
+2023-11-20 09:43:18.203572+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc_only table 'passwd'
+2023-11-20 09:43:18.206193+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia ram table 'reg_users_counter'
+2023-11-20 09:43:18.214559+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc_only table 'oauth_token'
+2023-11-20 09:43:18.217669+00:00 [info] <0.381.0>@ejabberd_mnesia:create/2:270 Creating Mnesia disc table 'oauth_client'
+2023-11-20 09:43:18.232578+00:00 [info] <0.179.0>@ejabberd_cluster_mnesia:wait_for_sync/1:123 Waiting for Mnesia synchronization to complete
+2023-11-20 09:43:18.248162+00:00 [warning] <0.519.0>@ejabberd_pkix:log_warnings/1:393 Invalid certificate in /opt/ejabberd/conf/server.pem: at line 53: self-signed certificate
+2023-11-20 09:43:18.268244+00:00 [warning] <0.519.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching pubsub.localhost
+2023-11-20 09:43:18.268329+00:00 [warning] <0.519.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching proxy.localhost
+2023-11-20 09:43:18.268425+00:00 [warning] <0.519.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching conference.localhost
+2023-11-20 09:43:18.268474+00:00 [warning] <0.519.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching upload.localhost
+2023-11-20 09:43:18.269246+00:00 [info] <0.179.0>@ejabberd_app:start/2:63 ejabberd 23.10.0 is started in the node ejabberd@localhost in 0.86s
+2023-11-20 09:43:18.269443+00:00 [info] <0.516.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:5280 for ejabberd_http
+2023-11-20 09:43:18.269484+00:00 [info] <0.518.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:1883 for mod_mqtt
+2023-11-20 09:43:18.269541+00:00 [info] <0.804.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at 172.20.0.3:7777 for mod_proxy65_stream
+2023-11-20 09:43:18.269508+00:00 [info] <0.515.0>@ejabberd_listener:init/4:163 Start accepting TLS connections at [::]:5443 for ejabberd_http
+2023-11-20 09:43:18.269514+00:00 [info] <0.514.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:5269 for ejabberd_s2s_in
+2023-11-20 09:43:18.269517+00:00 [info] <0.513.0>@ejabberd_listener:init/4:163 Start accepting TLS connections at [::]:5223 for ejabberd_c2s
+2023-11-20 09:43:18.269554+00:00 [info] <0.512.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:5222 for ejabberd_c2s
+2023-11-20 09:43:18.269521+00:00 [info] <0.517.0>@ejabberd_listener:init/4:129 Start accepting UDP connections at [::]:3478 for ejabberd_stun
+2023-11-20 09:43:30.225590+00:00 [notice] <0.70.0> SIGTERM received - shutting down
+
+2023-11-20 09:43:30.230248+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:5222 for ejabberd_c2s
+2023-11-20 09:43:30.230661+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TLS connections at [::]:5223 for ejabberd_c2s
+2023-11-20 09:43:30.230857+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:5269 for ejabberd_s2s_in
+2023-11-20 09:43:30.231210+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TLS connections at [::]:5443 for ejabberd_http
+2023-11-20 09:43:30.231517+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:5280 for ejabberd_http
+2023-11-20 09:43:30.231732+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting UDP connections at [::]:3478 for ejabberd_stun
+2023-11-20 09:43:30.232095+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:1883 for mod_mqtt
+2023-11-20 09:43:30.266867+00:00 [info] <0.179.0>@ejabberd_app:stop/1:112 ejabberd 23.10.0 is stopped in the node ejabberd@localhost
+2023-11-20 09:43:36.168565+00:00 [info] <0.179.0>@ejabberd_config:load/1:82 Loading configuration from /opt/ejabberd/conf/ejabberd.yml
+2023-11-20 09:43:36.441346+00:00 [info] <0.179.0>@ejabberd_config:load/1:89 Configuration loaded successfully
+2023-11-20 09:43:36.553761+00:00 [info] <0.580.0>@ejabberd_systemd:init/1:94 Got no NOTIFY_SOCKET, notifications disabled
+2023-11-20 09:43:36.663211+00:00 [info] <0.579.0>@gen_mod:start_modules/0:141 Loading modules for localhost
+2023-11-20 09:43:36.665052+00:00 [warning] <0.579.0>@mod_mam:start/2:113 Mnesia backend for mod_mam is not recommended: it's limited to 2GB and often gets corrupted when reaching this limit. SQL backend is recommended. Namely, for small servers SQLite is a preferred choice because it's very easy to configure.
+2023-11-20 09:43:36.710217+00:00 [info] <0.674.0>@mod_stun_disco:parse_listener/1:616 Going to offer STUN/TURN service: 172.21.0.3:3478 (udp)
+2023-11-20 09:43:36.777734+00:00 [info] <0.711.0>@mod_mqtt:init_topic_cache/2:644 Building MQTT cache for localhost, this may take a while
+2023-11-20 09:43:36.781820+00:00 [warning] <0.719.0>@ejabberd_captcha:get_prog_name/0:444 The option captcha_cmd is not configured, but some module wants to use the CAPTCHA feature.
+2023-11-20 09:43:36.804879+00:00 [info] <0.179.0>@ejabberd_cluster_mnesia:wait_for_sync/1:123 Waiting for Mnesia synchronization to complete
+2023-11-20 09:43:36.821286+00:00 [warning] <0.613.0>@ejabberd_pkix:log_warnings/1:393 Invalid certificate in /opt/ejabberd/conf/server.pem: at line 53: self-signed certificate
+2023-11-20 09:43:36.858441+00:00 [warning] <0.613.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching pubsub.localhost
+2023-11-20 09:43:36.858608+00:00 [warning] <0.613.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching proxy.localhost
+2023-11-20 09:43:36.858660+00:00 [warning] <0.613.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching conference.localhost
+2023-11-20 09:43:36.858721+00:00 [warning] <0.613.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching upload.localhost
+2023-11-20 09:43:36.859821+00:00 [info] <0.179.0>@ejabberd_app:start/2:63 ejabberd 23.10.0 is started in the node ejabberd@localhost in 0.76s
+2023-11-20 09:43:36.860051+00:00 [info] <0.715.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at 172.21.0.3:7777 for mod_proxy65_stream
+2023-11-20 09:43:36.860170+00:00 [info] <0.611.0>@ejabberd_listener:init/4:129 Start accepting UDP connections at [::]:3478 for ejabberd_stun
+2023-11-20 09:43:36.860217+00:00 [info] <0.608.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:5269 for ejabberd_s2s_in
+2023-11-20 09:43:36.860286+00:00 [info] <0.606.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:5222 for ejabberd_c2s
+2023-11-20 09:43:36.860197+00:00 [info] <0.610.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:5280 for ejabberd_http
+2023-11-20 09:43:36.860330+00:00 [info] <0.607.0>@ejabberd_listener:init/4:163 Start accepting TLS connections at [::]:5223 for ejabberd_c2s
+2023-11-20 09:43:36.860503+00:00 [info] <0.609.0>@ejabberd_listener:init/4:163 Start accepting TLS connections at [::]:5443 for ejabberd_http
+2023-11-20 09:43:36.860586+00:00 [info] <0.612.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:1883 for mod_mqtt
+2023-11-20 09:43:48.142937+00:00 [info] <0.606.0>@ejabberd_listener:accept/7:344 (<0.789.0>) Accepted connection [::ffff:192.168.65.1]:26012 -> [::ffff:172.21.0.3]:5222
+2023-11-20 09:53:15.431645+00:00 [notice] <0.70.0> SIGTERM received - shutting down
+
+2023-11-20 09:53:15.442757+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:5222 for ejabberd_c2s
+2023-11-20 09:53:15.443251+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TLS connections at [::]:5223 for ejabberd_c2s
+2023-11-20 09:53:15.443442+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:5269 for ejabberd_s2s_in
+2023-11-20 09:53:15.443660+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TLS connections at [::]:5443 for ejabberd_http
+2023-11-20 09:53:15.443765+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:5280 for ejabberd_http
+2023-11-20 09:53:15.443973+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting UDP connections at [::]:3478 for ejabberd_stun
+2023-11-20 09:53:15.444041+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:1883 for mod_mqtt
+2023-11-20 09:53:15.483490+00:00 [info] <0.179.0>@ejabberd_app:stop/1:112 ejabberd 23.10.0 is stopped in the node ejabberd@localhost
+2023-11-20 09:53:17.565371+00:00 [info] <0.179.0>@ejabberd_config:load/1:82 Loading configuration from /opt/ejabberd/conf/ejabberd.yml
+2023-11-20 09:53:17.612249+00:00 [critical] <0.179.0>@ejabberd_app:start/2:72 Failed to start ejabberd application: Invalid value of option listen->5->request_handlers->'module': Module 'ejabberd_c2s' doesn't export function socket_handoff/3
+2023-11-20 09:53:23.296319+00:00 [info] <0.179.0>@ejabberd_config:load/1:82 Loading configuration from /opt/ejabberd/conf/ejabberd.yml
+2023-11-20 09:53:23.354262+00:00 [critical] <0.179.0>@ejabberd_app:start/2:72 Failed to start ejabberd application: Invalid value of option listen->5->request_handlers->'module': Module 'ejabberd_c2s' doesn't export function socket_handoff/3
+2023-11-20 09:53:33.662212+00:00 [info] <0.179.0>@ejabberd_config:load/1:82 Loading configuration from /opt/ejabberd/conf/ejabberd.yml
+2023-11-20 09:53:33.712668+00:00 [critical] <0.179.0>@ejabberd_app:start/2:72 Failed to start ejabberd application: Invalid value of option listen->5->request_handlers->'module': Module 'ejabberd_c2s' doesn't export function socket_handoff/3
+2023-11-20 09:53:37.791363+00:00 [info] <0.179.0>@ejabberd_config:load/1:82 Loading configuration from /opt/ejabberd/conf/ejabberd.yml
+2023-11-20 09:53:37.836408+00:00 [critical] <0.179.0>@ejabberd_app:start/2:72 Failed to start ejabberd application: Invalid value of option listen->5->request_handlers->'module': Module 'ejabberd_c2s' doesn't export function socket_handoff/3
+2023-11-20 09:54:12.013813+00:00 [info] <0.179.0>@ejabberd_config:load/1:82 Loading configuration from /opt/ejabberd/conf/ejabberd.yml
+2023-11-20 09:54:12.057001+00:00 [critical] <0.179.0>@ejabberd_app:start/2:72 Failed to start ejabberd application: Invalid value of option listen->5: Duplicated option: module
+2023-11-20 09:54:20.092116+00:00 [info] <0.179.0>@ejabberd_config:load/1:82 Loading configuration from /opt/ejabberd/conf/ejabberd.yml
+2023-11-20 09:54:20.312770+00:00 [info] <0.179.0>@ejabberd_config:load/1:89 Configuration loaded successfully
+2023-11-20 09:54:20.418507+00:00 [info] <0.528.0>@ejabberd_systemd:init/1:94 Got no NOTIFY_SOCKET, notifications disabled
+2023-11-20 09:54:20.497145+00:00 [info] <0.527.0>@gen_mod:start_modules/0:141 Loading modules for localhost
+2023-11-20 09:54:20.499313+00:00 [warning] <0.527.0>@mod_mam:start/2:113 Mnesia backend for mod_mam is not recommended: it's limited to 2GB and often gets corrupted when reaching this limit. SQL backend is recommended. Namely, for small servers SQLite is a preferred choice because it's very easy to configure.
+2023-11-20 09:54:20.542569+00:00 [info] <0.622.0>@mod_stun_disco:parse_listener/1:616 Going to offer STUN/TURN service: 172.21.0.3:3478 (udp)
+2023-11-20 09:54:20.602258+00:00 [info] <0.659.0>@mod_mqtt:init_topic_cache/2:644 Building MQTT cache for localhost, this may take a while
+2023-11-20 09:54:20.606145+00:00 [warning] <0.667.0>@ejabberd_captcha:get_prog_name/0:444 The option captcha_cmd is not configured, but some module wants to use the CAPTCHA feature.
+2023-11-20 09:54:20.632143+00:00 [info] <0.179.0>@ejabberd_cluster_mnesia:wait_for_sync/1:123 Waiting for Mnesia synchronization to complete
+2023-11-20 09:54:20.649013+00:00 [warning] <0.561.0>@ejabberd_pkix:log_warnings/1:393 Invalid certificate in /opt/ejabberd/conf/server.pem: at line 53: self-signed certificate
+2023-11-20 09:54:20.672268+00:00 [warning] <0.561.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching pubsub.localhost
+2023-11-20 09:54:20.672344+00:00 [warning] <0.561.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching proxy.localhost
+2023-11-20 09:54:20.672377+00:00 [warning] <0.561.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching conference.localhost
+2023-11-20 09:54:20.672411+00:00 [warning] <0.561.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching upload.localhost
+2023-11-20 09:54:20.673462+00:00 [info] <0.179.0>@ejabberd_app:start/2:63 ejabberd 23.10.0 is started in the node ejabberd@localhost in 0.64s
+2023-11-20 09:54:20.674323+00:00 [info] <0.663.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at 172.21.0.3:7777 for mod_proxy65_stream
+2023-11-20 09:54:20.674328+00:00 [info] <0.560.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:1883 for mod_mqtt
+2023-11-20 09:54:20.674324+00:00 [info] <0.559.0>@ejabberd_listener:init/4:129 Start accepting UDP connections at [::]:3478 for ejabberd_stun
+2023-11-20 09:54:20.674368+00:00 [info] <0.558.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:5280 for ejabberd_http
+2023-11-20 09:54:20.674397+00:00 [info] <0.556.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:5269 for ejabberd_s2s_in
+2023-11-20 09:54:20.674340+00:00 [info] <0.557.0>@ejabberd_listener:init/4:163 Start accepting TLS connections at [::]:5443 for ejabberd_http
+2023-11-20 09:54:20.674403+00:00 [info] <0.555.0>@ejabberd_listener:init/4:163 Start accepting TLS connections at [::]:5223 for ejabberd_c2s
+2023-11-20 09:54:20.674422+00:00 [info] <0.554.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:5222 for ejabberd_c2s
+2023-11-20 09:55:09.609933+00:00 [notice] <0.70.0> SIGTERM received - shutting down
+
+2023-11-20 09:55:09.614521+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:5222 for ejabberd_c2s
+2023-11-20 09:55:09.615392+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TLS connections at [::]:5223 for ejabberd_c2s
+2023-11-20 09:55:09.617105+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:5269 for ejabberd_s2s_in
+2023-11-20 09:55:09.617281+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TLS connections at [::]:5443 for ejabberd_http
+2023-11-20 09:55:09.617832+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:5280 for ejabberd_http
+2023-11-20 09:55:09.617907+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting UDP connections at [::]:3478 for ejabberd_stun
+2023-11-20 09:55:09.617986+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:1883 for mod_mqtt
+2023-11-20 09:55:09.646870+00:00 [info] <0.179.0>@ejabberd_app:stop/1:112 ejabberd 23.10.0 is stopped in the node ejabberd@localhost
+2023-11-20 09:55:11.621581+00:00 [info] <0.179.0>@ejabberd_config:load/1:82 Loading configuration from /opt/ejabberd/conf/ejabberd.yml
+2023-11-20 09:55:11.844012+00:00 [info] <0.179.0>@ejabberd_config:load/1:89 Configuration loaded successfully
+2023-11-20 09:55:11.945109+00:00 [info] <0.528.0>@ejabberd_systemd:init/1:94 Got no NOTIFY_SOCKET, notifications disabled
+2023-11-20 09:55:12.024057+00:00 [info] <0.527.0>@gen_mod:start_modules/0:141 Loading modules for localhost
+2023-11-20 09:55:12.026201+00:00 [warning] <0.527.0>@mod_mam:start/2:113 Mnesia backend for mod_mam is not recommended: it's limited to 2GB and often gets corrupted when reaching this limit. SQL backend is recommended. Namely, for small servers SQLite is a preferred choice because it's very easy to configure.
+2023-11-20 09:55:12.064585+00:00 [info] <0.622.0>@mod_stun_disco:parse_listener/1:616 Going to offer STUN/TURN service: 172.21.0.3:3478 (udp)
+2023-11-20 09:55:12.131942+00:00 [info] <0.659.0>@mod_mqtt:init_topic_cache/2:644 Building MQTT cache for localhost, this may take a while
+2023-11-20 09:55:12.135956+00:00 [warning] <0.667.0>@ejabberd_captcha:get_prog_name/0:444 The option captcha_cmd is not configured, but some module wants to use the CAPTCHA feature.
+2023-11-20 09:55:12.158041+00:00 [info] <0.179.0>@ejabberd_cluster_mnesia:wait_for_sync/1:123 Waiting for Mnesia synchronization to complete
+2023-11-20 09:55:12.172864+00:00 [warning] <0.561.0>@ejabberd_pkix:log_warnings/1:393 Invalid certificate in /opt/ejabberd/conf/server.pem: at line 53: self-signed certificate
+2023-11-20 09:55:12.194458+00:00 [warning] <0.561.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching pubsub.localhost
+2023-11-20 09:55:12.194557+00:00 [warning] <0.561.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching proxy.localhost
+2023-11-20 09:55:12.194623+00:00 [warning] <0.561.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching conference.localhost
+2023-11-20 09:55:12.194686+00:00 [warning] <0.561.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching upload.localhost
+2023-11-20 09:55:12.195778+00:00 [info] <0.179.0>@ejabberd_app:start/2:63 ejabberd 23.10.0 is started in the node ejabberd@localhost in 0.65s
+2023-11-20 09:55:12.196606+00:00 [info] <0.556.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:5269 for ejabberd_s2s_in
+2023-11-20 09:55:12.196603+00:00 [info] <0.558.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:5280 for ejabberd_http
+2023-11-20 09:55:12.196599+00:00 [info] <0.559.0>@ejabberd_listener:init/4:129 Start accepting UDP connections at [::]:3478 for ejabberd_stun
+2023-11-20 09:55:12.196686+00:00 [info] <0.555.0>@ejabberd_listener:init/4:163 Start accepting TLS connections at [::]:5223 for ejabberd_c2s
+2023-11-20 09:55:12.196618+00:00 [info] <0.663.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at 172.21.0.3:7777 for mod_proxy65_stream
+2023-11-20 09:55:12.196700+00:00 [info] <0.554.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:5222 for ejabberd_c2s
+2023-11-20 09:55:12.196727+00:00 [info] <0.560.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:1883 for mod_mqtt
+2023-11-20 09:55:12.196668+00:00 [info] <0.557.0>@ejabberd_listener:init/4:163 Start accepting TLS connections at [::]:5443 for ejabberd_http
+2023-11-20 09:55:23.797726+00:00 [info] <0.554.0>@ejabberd_listener:accept/7:344 (<0.737.0>) Accepted connection [::ffff:192.168.65.1]:26828 -> [::ffff:172.21.0.3]:5222
+2023-11-20 09:55:23.842343+00:00 [warning] <0.737.0>@ejabberd_c2s:process_auth_result/3:280 (tcp|<0.737.0>) Failed c2s SCRAM-SHA-1 authentication for admin@localhost from ::ffff:192.168.65.1: Invalid username or password
+2023-11-20 09:58:00.880672+00:00 [notice] <0.70.0> SIGTERM received - shutting down
+
+2023-11-20 09:58:00.883308+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:5222 for ejabberd_c2s
+2023-11-20 09:58:00.883797+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TLS connections at [::]:5223 for ejabberd_c2s
+2023-11-20 09:58:00.883947+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:5269 for ejabberd_s2s_in
+2023-11-20 09:58:00.884067+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TLS connections at [::]:5443 for ejabberd_http
+2023-11-20 09:58:00.884163+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:5280 for ejabberd_http
+2023-11-20 09:58:00.884250+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting UDP connections at [::]:3478 for ejabberd_stun
+2023-11-20 09:58:00.884362+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:1883 for mod_mqtt
+2023-11-20 09:58:00.906742+00:00 [info] <0.179.0>@ejabberd_app:stop/1:112 ejabberd 23.10.0 is stopped in the node ejabberd@localhost
+2023-11-20 09:58:02.906780+00:00 [info] <0.179.0>@ejabberd_config:load/1:82 Loading configuration from /opt/ejabberd/conf/ejabberd.yml
+2023-11-20 09:58:02.938691+00:00 [critical] <0.179.0>@ejabberd_app:start/2:72 Failed to start ejabberd application: Invalid value of option listen->1->dhfile: Failed to read file '/etc/ssl/ejabberd/dh1024.pem': no such file or directory
+2023-11-20 09:58:32.608527+00:00 [info] <0.179.0>@ejabberd_config:load/1:82 Loading configuration from /opt/ejabberd/conf/ejabberd.yml
+2023-11-20 09:58:32.642789+00:00 [critical] <0.179.0>@ejabberd_app:start/2:72 Failed to start ejabberd application: Invalid value of option listen->1->dhfile: Failed to read file '/etc/ssl/ejabberd/dh1024.pem': no such file or directory
+2023-11-20 09:58:47.867088+00:00 [info] <0.179.0>@ejabberd_config:load/1:82 Loading configuration from /opt/ejabberd/conf/ejabberd.yml
+2023-11-20 09:58:48.087796+00:00 [info] <0.179.0>@ejabberd_config:load/1:89 Configuration loaded successfully
+2023-11-20 09:58:48.190301+00:00 [info] <0.528.0>@ejabberd_systemd:init/1:94 Got no NOTIFY_SOCKET, notifications disabled
+2023-11-20 09:58:48.271476+00:00 [info] <0.527.0>@gen_mod:start_modules/0:141 Loading modules for localhost
+2023-11-20 09:58:48.273631+00:00 [warning] <0.527.0>@mod_mam:start/2:113 Mnesia backend for mod_mam is not recommended: it's limited to 2GB and often gets corrupted when reaching this limit. SQL backend is recommended. Namely, for small servers SQLite is a preferred choice because it's very easy to configure.
+2023-11-20 09:58:48.313370+00:00 [info] <0.622.0>@mod_stun_disco:parse_listener/1:616 Going to offer STUN/TURN service: 172.21.0.3:3478 (udp)
+2023-11-20 09:58:48.374363+00:00 [info] <0.659.0>@mod_mqtt:init_topic_cache/2:644 Building MQTT cache for localhost, this may take a while
+2023-11-20 09:58:48.378970+00:00 [warning] <0.667.0>@ejabberd_captcha:get_prog_name/0:444 The option captcha_cmd is not configured, but some module wants to use the CAPTCHA feature.
+2023-11-20 09:58:48.402654+00:00 [info] <0.179.0>@ejabberd_cluster_mnesia:wait_for_sync/1:123 Waiting for Mnesia synchronization to complete
+2023-11-20 09:58:48.418829+00:00 [warning] <0.561.0>@ejabberd_pkix:log_warnings/1:393 Invalid certificate in /opt/ejabberd/conf/server.pem: at line 53: self-signed certificate
+2023-11-20 09:58:48.439505+00:00 [warning] <0.561.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching pubsub.localhost
+2023-11-20 09:58:48.439584+00:00 [warning] <0.561.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching proxy.localhost
+2023-11-20 09:58:48.439625+00:00 [warning] <0.561.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching conference.localhost
+2023-11-20 09:58:48.439686+00:00 [warning] <0.561.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching upload.localhost
+2023-11-20 09:58:48.440573+00:00 [info] <0.179.0>@ejabberd_app:start/2:63 ejabberd 23.10.0 is started in the node ejabberd@localhost in 0.63s
+2023-11-20 09:58:48.441395+00:00 [info] <0.559.0>@ejabberd_listener:init/4:129 Start accepting UDP connections at [::]:3478 for ejabberd_stun
+2023-11-20 09:58:48.441405+00:00 [info] <0.555.0>@ejabberd_listener:init/4:163 Start accepting TLS connections at [::]:5223 for ejabberd_c2s
+2023-11-20 09:58:48.441472+00:00 [info] <0.663.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at 172.21.0.3:7777 for mod_proxy65_stream
+2023-11-20 09:58:48.441470+00:00 [info] <0.554.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:5222 for ejabberd_c2s
+2023-11-20 09:58:48.441486+00:00 [info] <0.560.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:1883 for mod_mqtt
+2023-11-20 09:58:48.441507+00:00 [info] <0.557.0>@ejabberd_listener:init/4:163 Start accepting TLS connections at [::]:5443 for ejabberd_http
+2023-11-20 09:58:48.441500+00:00 [info] <0.558.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:5280 for ejabberd_http
+2023-11-20 09:58:48.441509+00:00 [info] <0.556.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:5269 for ejabberd_s2s_in
+2023-11-20 09:58:58.401263+00:00 [info] <0.554.0>@ejabberd_listener:accept/7:344 (<0.737.0>) Accepted connection [::ffff:192.168.65.1]:27049 -> [::ffff:172.21.0.3]:5222
+2023-11-20 09:58:58.465142+00:00 [warning] <0.737.0>@ejabberd_c2s:process_auth_result/3:280 (tcp|<0.737.0>) Failed c2s SCRAM-SHA-1 authentication for admin@localhost from ::ffff:192.168.65.1: Invalid username or password
+2023-11-20 10:05:57.721875+00:00 [info] <0.558.0>@ejabberd_listener:accept/7:344 (<0.770.0>) Accepted connection [::ffff:192.168.65.1]:43854 -> [::ffff:172.21.0.3]:5280
+2023-11-20 10:05:57.788779+00:00 [info] <0.558.0>@ejabberd_listener:accept/7:344 (<0.771.0>) Accepted connection [::ffff:192.168.65.1]:43855 -> [::ffff:172.21.0.3]:5280
+2023-11-20 10:05:57.790751+00:00 [info] <0.558.0>@ejabberd_listener:accept/7:344 (<0.772.0>) Accepted connection [::ffff:192.168.65.1]:43856 -> [::ffff:172.21.0.3]:5280
+2023-11-20 10:06:01.474990+00:00 [info] <0.558.0>@ejabberd_listener:accept/7:344 (<0.773.0>) Accepted connection [::ffff:192.168.65.1]:43859 -> [::ffff:172.21.0.3]:5280
+2023-11-20 10:06:01.477233+00:00 [warning] <0.773.0>@ejabberd_web_admin:process2/2:215 Access of <<"admin">> from <<"::ffff:192.168.65.1">> failed with error: <<"inexistent-account">>
+2023-11-20 10:06:04.899827+00:00 [info] <0.558.0>@ejabberd_listener:accept/7:344 (<0.774.0>) Accepted connection [::ffff:192.168.65.1]:43861 -> [::ffff:172.21.0.3]:5280
+2023-11-20 10:06:04.900341+00:00 [warning] <0.774.0>@ejabberd_web_admin:process2/2:215 Access of <<"admin">> from <<"::ffff:192.168.65.1">> failed with error: <<"inexistent-account">>
+2023-11-20 10:06:07.750761+00:00 [info] <0.558.0>@ejabberd_listener:accept/7:344 (<0.775.0>) Accepted connection [::ffff:192.168.65.1]:43863 -> [::ffff:172.21.0.3]:5280
+2023-11-20 10:06:07.820117+00:00 [info] <0.558.0>@ejabberd_listener:accept/7:344 (<0.776.0>) Accepted connection [::ffff:192.168.65.1]:43864 -> [::ffff:172.21.0.3]:5280
+2023-11-20 10:07:31.782701+00:00 [info] <0.558.0>@ejabberd_listener:accept/7:344 (<0.784.0>) Accepted connection [::ffff:192.168.65.1]:43896 -> [::ffff:172.21.0.3]:5280
+2023-11-20 10:07:31.813741+00:00 [info] <0.558.0>@ejabberd_listener:accept/7:344 (<0.785.0>) Accepted connection [::ffff:192.168.65.1]:43897 -> [::ffff:172.21.0.3]:5280
+2023-11-20 10:07:31.824386+00:00 [info] <0.558.0>@ejabberd_listener:accept/7:344 (<0.786.0>) Accepted connection [::ffff:192.168.65.1]:43898 -> [::ffff:172.21.0.3]:5280
+2023-11-20 10:07:44.221865+00:00 [info] <0.554.0>@ejabberd_listener:accept/7:344 (<0.787.0>) Accepted connection [::ffff:192.168.65.1]:27271 -> [::ffff:172.21.0.3]:5222
+2023-11-20 10:07:44.496311+00:00 [info] <0.787.0>@ejabberd_c2s:process_auth_result/3:272 (tcp|<0.787.0>) Accepted c2s SCRAM-SHA-1 authentication for admin@localhost by mnesia backend from ::ffff:192.168.65.1
+2023-11-20 10:07:44.531561+00:00 [info] <0.787.0>@ejabberd_c2s:bind/2:450 (tcp|<0.787.0>) Opened c2s session for admin@localhost/xmppServices
+2023-11-20 10:07:47.529594+00:00 [info] <0.787.0>@ejabberd_c2s:process_terminated/2:295 (tcp|<0.787.0>) Closing c2s session for admin@localhost/xmppServices: Stream reset by peer

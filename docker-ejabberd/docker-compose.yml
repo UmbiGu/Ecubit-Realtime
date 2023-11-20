@@ -1,7 +1,7 @@
 version: '3'
 services:
   ejabberd:
-    image: ejabberd/ecs:latest
+    image: ghcr.io/processone/ejabberd:latest
     ports:
       - "1883:1883"
       - "5222:5222"
@@ -10,10 +10,10 @@ services:
       - "5443:5443"
       - "4369-4399:4369-4399"
     volumes:
-      - ./conf:/home/ejabberd/conf/
-      - ./database:/home/ejabberd/database/
-      - ./logs:/home/ejabberd/logs/
-      - ./upload:/home/ejabberd/upload/
+      - ./conf:/opt/ejabberd/conf
+      - ./database:/opt/ejabberd/database/
+      - ./logs:/opt/ejabberd/logs/
+      - ./upload:/opt/ejabberd/upload/
   mariadb:
     image: mariadb:latest
     ports:
