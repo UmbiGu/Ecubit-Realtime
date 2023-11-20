@@ -1,12 +1,18 @@
 package it.ecubit.xmpp.services.controller;
 
 import it.ecubit.xmpp.services.exception.ExceptionGeneric;
+import it.ecubit.xmpp.services.rest.entity.GetOfflineCount;
 import it.ecubit.xmpp.services.rest.entity.User;
+import it.ecubit.xmpp.services.rest.entity.room.CreateRoom;
+import it.ecubit.xmpp.services.rest.entity.room.GetRoomOccupants;
+import it.ecubit.xmpp.services.rest.entity.room.RoomOccupants;
 import it.ecubit.xmpp.services.rest.wrapperEntity.NumUserConnected;
+import it.ecubit.xmpp.services.rest.wrapperEntity.ResponseOfflineCount;
 import it.ecubit.xmpp.services.service.EjabberdApiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
 
 import java.io.IOException;
@@ -47,6 +53,23 @@ public class UserRestServiceController {
         return numUserConnected;
     }
 
+    @CrossOrigin
+    @PostMapping("/getOfflineCount")
+    public ResponseOfflineCount getOfflineCount(@RequestBody GetOfflineCount getOfflineCount) throws ExceptionGeneric, IOException{
+        return ejabberdApiService.getOfflineCount(getOfflineCount);
+    }
+
+    @CrossOrigin
+    @PostMapping("/createRoom")
+    public String createRoom(@RequestBody CreateRoom createRoom) throws ExceptionGeneric, IOException{
+        return ejabberdApiService.createRoom(createRoom);
+    }
+
+    @CrossOrigin
+    @PostMapping("/getRoomOccupants")
+    public List<RoomOccupants> getRoomOccupants(@RequestBody GetRoomOccupants getRoomOccupants) throws ExceptionGeneric, IOException{
+        return ejabberdApiService.getRoomOccupants(getRoomOccupants);
+    }
 //    @CrossOrigin
 //    @PostMapping(path = "/users/broadcast") // Map ONLY GET Requests
 //    public @ResponseBody

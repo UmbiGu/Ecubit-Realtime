@@ -1899,3 +1899,87 @@
 2023-11-20 10:07:44.496311+00:00 [info] <0.787.0>@ejabberd_c2s:process_auth_result/3:272 (tcp|<0.787.0>) Accepted c2s SCRAM-SHA-1 authentication for admin@localhost by mnesia backend from ::ffff:192.168.65.1
 2023-11-20 10:07:44.531561+00:00 [info] <0.787.0>@ejabberd_c2s:bind/2:450 (tcp|<0.787.0>) Opened c2s session for admin@localhost/xmppServices
 2023-11-20 10:07:47.529594+00:00 [info] <0.787.0>@ejabberd_c2s:process_terminated/2:295 (tcp|<0.787.0>) Closing c2s session for admin@localhost/xmppServices: Stream reset by peer
+2023-11-20 10:26:23.911024+00:00 [info] <0.558.0>@ejabberd_listener:accept/7:344 (<0.865.0>) Accepted connection [::ffff:192.168.65.1]:44325 -> [::ffff:172.21.0.3]:5280
+2023-11-20 10:26:23.914515+00:00 [info] <0.558.0>@ejabberd_listener:accept/7:344 (<0.866.0>) Accepted connection [::ffff:192.168.65.1]:44324 -> [::ffff:172.21.0.3]:5280
+2023-11-20 10:26:42.767656+00:00 [info] <0.554.0>@ejabberd_listener:accept/7:344 (<0.867.0>) Accepted connection [::ffff:192.168.65.1]:27698 -> [::ffff:172.21.0.3]:5222
+2023-11-20 10:26:43.031638+00:00 [info] <0.867.0>@ejabberd_c2s:process_auth_result/3:272 (tcp|<0.867.0>) Accepted c2s SCRAM-SHA-1 authentication for admin@localhost by mnesia backend from ::ffff:192.168.65.1
+2023-11-20 10:26:43.040466+00:00 [info] <0.867.0>@ejabberd_c2s:bind/2:450 (tcp|<0.867.0>) Opened c2s session for admin@localhost/xmppServices
+2023-11-20 10:27:13.255102+00:00 [info] <0.558.0>@ejabberd_listener:accept/7:344 (<0.872.0>) Accepted connection [::ffff:192.168.65.1]:44353 -> [::ffff:172.21.0.3]:5280
+2023-11-20 10:27:13.270056+00:00 [info] <0.872.0>@mod_http_api:log/3:511 API call register [{<<"user">>,<<"bob">>},
+                   {<<"host">>,<<"localhost">>},
+                   {<<"password">>,<<"bob">>}] from ::ffff:192.168.65.1:44353
+2023-11-20 10:27:37.378364+00:00 [info] <0.872.0>@mod_http_api:log/3:511 API call get_offline_count [{<<"user">>,<<"admin">>},
+                            {<<"host">>,<<"localhost">>}] from ::ffff:192.168.65.1:44353
+2023-11-20 10:27:48.223397+00:00 [info] <0.554.0>@ejabberd_listener:accept/7:344 (<0.873.0>) Accepted connection [::ffff:192.168.65.1]:27724 -> [::ffff:172.21.0.3]:5222
+2023-11-20 10:27:48.471634+00:00 [warning] <0.873.0>@ejabberd_c2s:process_terminated/2:315 (tls|<0.873.0>) Failed to secure c2s connection: TLS failed: SSL_do_handshake failed: error:14094416:SSL routines:ssl3_read_bytes:sslv3 alert certificate unknown
+2023-11-20 10:27:54.341758+00:00 [info] <0.554.0>@ejabberd_listener:accept/7:344 (<0.874.0>) Accepted connection [::ffff:192.168.65.1]:27727 -> [::ffff:172.21.0.3]:5222
+2023-11-20 10:27:54.605380+00:00 [info] <0.874.0>@ejabberd_c2s:process_auth_result/3:272 (tls|<0.874.0>) Accepted c2s SCRAM-SHA-1 authentication for bob@localhost by mnesia backend from ::ffff:192.168.65.1
+2023-11-20 10:27:54.618549+00:00 [info] <0.874.0>@ejabberd_c2s:bind/2:450 (tls|<0.874.0>) Opened c2s session for bob@localhost/Spark
+2023-11-20 10:27:58.503495+00:00 [info] <0.872.0>@mod_http_api:log/3:511 API call get_offline_count [{<<"user">>,<<"admin">>},
+                            {<<"host">>,<<"localhost">>}] from ::ffff:192.168.65.1:44353
+2023-11-20 10:28:12.331306+00:00 [info] <0.872.0>@mod_http_api:log/3:513 API call connected_users_number [] ({0,0,0,0,0,65535,49320,16641})
+2023-11-20 10:28:34.451696+00:00 [info] <0.874.0>@ejabberd_c2s:process_terminated/2:295 (tls|<0.874.0>) Closing c2s session for bob@localhost/Spark: Stream reset by peer
+2023-11-20 10:28:38.166915+00:00 [info] <0.872.0>@mod_http_api:log/3:511 API call get_offline_count [{<<"user">>,<<"admin">>},
+                            {<<"host">>,<<"localhost">>}] from ::ffff:192.168.65.1:44353
+2023-11-20 10:30:42.239292+00:00 [info] <0.867.0>@ejabberd_c2s:process_terminated/2:295 (tcp|<0.867.0>) Closing c2s session for admin@localhost/xmppServices: Stream reset by peer
+2023-11-20 10:30:48.085275+00:00 [info] <0.554.0>@ejabberd_listener:accept/7:344 (<0.891.0>) Accepted connection [::ffff:192.168.65.1]:27801 -> [::ffff:172.21.0.3]:5222
+2023-11-20 10:30:48.325454+00:00 [info] <0.891.0>@ejabberd_c2s:process_auth_result/3:272 (tcp|<0.891.0>) Accepted c2s SCRAM-SHA-1 authentication for admin@localhost by mnesia backend from ::ffff:192.168.65.1
+2023-11-20 10:30:48.334131+00:00 [info] <0.891.0>@ejabberd_c2s:bind/2:450 (tcp|<0.891.0>) Opened c2s session for admin@localhost/xmppServices
+2023-11-20 10:30:51.701038+00:00 [info] <0.558.0>@ejabberd_listener:accept/7:344 (<0.892.0>) Accepted connection [::ffff:192.168.65.1]:44448 -> [::ffff:172.21.0.3]:5280
+2023-11-20 10:30:51.704982+00:00 [info] <0.892.0>@mod_http_api:log/3:511 API call get_offline_count [{<<"user">>,<<"bob">>},
+                            {<<"host">>,<<"localhost">>}] from ::ffff:192.168.65.1:44448
+2023-11-20 10:31:00.610739+00:00 [info] <0.892.0>@mod_http_api:log/3:511 API call get_offline_count [{<<"user">>,<<"bob">>},
+                            {<<"host">>,<<"localhost">>}] from ::ffff:192.168.65.1:44448
+2023-11-20 10:31:46.762571+00:00 [info] <0.554.0>@ejabberd_listener:accept/7:344 (<0.896.0>) Accepted connection [::ffff:192.168.65.1]:27823 -> [::ffff:172.21.0.3]:5222
+2023-11-20 10:31:47.161773+00:00 [info] <0.896.0>@ejabberd_c2s:process_auth_result/3:272 (tls|<0.896.0>) Accepted c2s SCRAM-SHA-1 authentication for bob@localhost by mnesia backend from ::ffff:192.168.65.1
+2023-11-20 10:31:47.177274+00:00 [info] <0.896.0>@ejabberd_c2s:bind/2:450 (tls|<0.896.0>) Opened c2s session for bob@localhost/Spark
+2023-11-20 10:32:37.847716+00:00 [info] <0.896.0>@ejabberd_c2s:process_terminated/2:295 (tls|<0.896.0>) Closing c2s session for bob@localhost/Spark: Stream reset by peer
+2023-11-20 10:33:33.910820+00:00 [info] <0.891.0>@ejabberd_c2s:process_terminated/2:295 (tcp|<0.891.0>) Closing c2s session for admin@localhost/xmppServices: Stream reset by peer
+2023-11-20 10:33:39.904439+00:00 [info] <0.554.0>@ejabberd_listener:accept/7:344 (<0.909.0>) Accepted connection [::ffff:192.168.65.1]:27887 -> [::ffff:172.21.0.3]:5222
+2023-11-20 10:33:40.005871+00:00 [info] <0.909.0>@ejabberd_c2s:process_auth_result/3:272 (tcp|<0.909.0>) Accepted c2s SCRAM-SHA-1 authentication for admin@localhost by mnesia backend from ::ffff:192.168.65.1
+2023-11-20 10:33:40.110872+00:00 [info] <0.909.0>@ejabberd_c2s:bind/2:450 (tcp|<0.909.0>) Opened c2s session for admin@localhost/xmppServices
+2023-11-20 10:34:04.015485+00:00 [info] <0.558.0>@ejabberd_listener:accept/7:344 (<0.913.0>) Accepted connection [::ffff:192.168.65.1]:44540 -> [::ffff:172.21.0.3]:5280
+2023-11-20 10:34:04.041648+00:00 [info] <0.913.0>@mod_http_api:log/3:511 API call get_offline_count [] from ::ffff:192.168.65.1:44540
+2023-11-20 10:34:04.047667+00:00 [info] <0.913.0>@mod_http_api:get_elem_delete/4:300 Command get_offline_count call rejected, missing attribute user
+2023-11-20 10:34:18.440196+00:00 [info] <0.909.0>@ejabberd_c2s:process_terminated/2:295 (tcp|<0.909.0>) Closing c2s session for admin@localhost/xmppServices: Stream reset by peer
+2023-11-20 10:34:24.114495+00:00 [info] <0.554.0>@ejabberd_listener:accept/7:344 (<0.914.0>) Accepted connection [::ffff:192.168.65.1]:27916 -> [::ffff:172.21.0.3]:5222
+2023-11-20 10:34:24.323863+00:00 [info] <0.914.0>@ejabberd_c2s:process_auth_result/3:272 (tcp|<0.914.0>) Accepted c2s SCRAM-SHA-1 authentication for admin@localhost by mnesia backend from ::ffff:192.168.65.1
+2023-11-20 10:34:24.334798+00:00 [info] <0.914.0>@ejabberd_c2s:bind/2:450 (tcp|<0.914.0>) Opened c2s session for admin@localhost/xmppServices
+2023-11-20 10:34:27.331030+00:00 [info] <0.558.0>@ejabberd_listener:accept/7:344 (<0.915.0>) Accepted connection [::ffff:192.168.65.1]:44562 -> [::ffff:172.21.0.3]:5280
+2023-11-20 10:34:27.333618+00:00 [info] <0.915.0>@mod_http_api:log/3:511 API call get_offline_count [] from ::ffff:192.168.65.1:44562
+2023-11-20 10:34:27.337660+00:00 [info] <0.915.0>@mod_http_api:get_elem_delete/4:300 Command get_offline_count call rejected, missing attribute user
+2023-11-20 10:35:54.521119+00:00 [info] <0.914.0>@ejabberd_c2s:process_terminated/2:295 (tcp|<0.914.0>) Closing c2s session for admin@localhost/xmppServices: Stream reset by peer
+2023-11-20 10:36:00.276086+00:00 [info] <0.554.0>@ejabberd_listener:accept/7:344 (<0.925.0>) Accepted connection [::ffff:192.168.65.1]:27962 -> [::ffff:172.21.0.3]:5222
+2023-11-20 10:36:00.477179+00:00 [info] <0.925.0>@ejabberd_c2s:process_auth_result/3:272 (tcp|<0.925.0>) Accepted c2s SCRAM-SHA-1 authentication for admin@localhost by mnesia backend from ::ffff:192.168.65.1
+2023-11-20 10:36:00.488272+00:00 [info] <0.925.0>@ejabberd_c2s:bind/2:450 (tcp|<0.925.0>) Opened c2s session for admin@localhost/xmppServices
+2023-11-20 11:05:17.612495+00:00 [info] <0.925.0>@ejabberd_c2s:process_terminated/2:295 (tcp|<0.925.0>) Closing c2s session for admin@localhost/xmppServices: Stream reset by peer
+2023-11-20 13:55:11.768869+00:00 [info] <0.554.0>@ejabberd_listener:accept/7:344 (<0.1525.0>) Accepted connection [::ffff:192.168.65.1]:30995 -> [::ffff:172.21.0.3]:5222
+2023-11-20 13:55:12.168363+00:00 [info] <0.1525.0>@ejabberd_c2s:process_auth_result/3:272 (tls|<0.1525.0>) Accepted c2s SCRAM-SHA-1 authentication for bob@localhost by mnesia backend from ::ffff:192.168.65.1
+2023-11-20 13:55:12.186810+00:00 [info] <0.1525.0>@ejabberd_c2s:bind/2:450 (tls|<0.1525.0>) Opened c2s session for bob@localhost/Spark
+2023-11-20 13:56:05.378871+00:00 [info] <0.554.0>@ejabberd_listener:accept/7:344 (<0.1530.0>) Accepted connection [::ffff:192.168.65.1]:31006 -> [::ffff:172.21.0.3]:5222
+2023-11-20 13:56:05.575932+00:00 [info] <0.1530.0>@ejabberd_c2s:process_auth_result/3:272 (tcp|<0.1530.0>) Accepted c2s SCRAM-SHA-1 authentication for admin@localhost by mnesia backend from ::ffff:192.168.65.1
+2023-11-20 13:56:05.585570+00:00 [info] <0.1530.0>@ejabberd_c2s:bind/2:450 (tcp|<0.1530.0>) Opened c2s session for admin@localhost/xmppServices
+2023-11-20 13:56:10.845139+00:00 [info] <0.558.0>@ejabberd_listener:accept/7:344 (<0.1531.0>) Accepted connection [::ffff:192.168.65.1]:47651 -> [::ffff:172.21.0.3]:5280
+2023-11-20 13:56:10.860059+00:00 [info] <0.1531.0>@mod_http_api:log/3:511 API call register [{<<"user">>,<<"marco">>},
+                   {<<"host">>,<<"localhost">>},
+                   {<<"password">>,<<"marco">>}] from ::ffff:192.168.65.1:47651
+2023-11-20 13:56:24.675142+00:00 [info] <0.1525.0>@ejabberd_c2s:process_terminated/2:295 (tls|<0.1525.0>) Closing c2s session for bob@localhost/Spark: Connection failed: connection closed
+2023-11-20 13:58:01.080258+00:00 [info] <0.554.0>@ejabberd_listener:accept/7:344 (<0.1539.0>) Accepted connection [::ffff:192.168.65.1]:31008 -> [::ffff:172.21.0.3]:5222
+2023-11-20 13:58:01.503215+00:00 [info] <0.1539.0>@ejabberd_c2s:process_auth_result/3:272 (tls|<0.1539.0>) Accepted c2s SCRAM-SHA-1 authentication for bob@localhost by mnesia backend from ::ffff:192.168.65.1
+2023-11-20 13:58:01.525583+00:00 [info] <0.1539.0>@ejabberd_c2s:bind/2:450 (tls|<0.1539.0>) Opened c2s session for bob@localhost/Spark
+2023-11-20 13:59:16.439496+00:00 [info] <0.1539.0>@ejabberd_c2s:process_terminated/2:295 (tls|<0.1539.0>) Closing c2s session for bob@localhost/Spark: Connection failed: connection closed
+2023-11-20 14:06:55.605957+00:00 [info] <0.1530.0>@ejabberd_c2s:process_terminated/2:295 (tcp|<0.1530.0>) Closing c2s session for admin@localhost/xmppServices: Stream reset by peer
+2023-11-20 14:07:02.484366+00:00 [info] <0.554.0>@ejabberd_listener:accept/7:344 (<0.1582.0>) Accepted connection [::ffff:192.168.65.1]:31031 -> [::ffff:172.21.0.3]:5222
+2023-11-20 14:07:02.690356+00:00 [info] <0.1582.0>@ejabberd_c2s:process_auth_result/3:272 (tcp|<0.1582.0>) Accepted c2s SCRAM-SHA-1 authentication for admin@localhost by mnesia backend from ::ffff:192.168.65.1
+2023-11-20 14:07:02.697243+00:00 [info] <0.1582.0>@ejabberd_c2s:bind/2:450 (tcp|<0.1582.0>) Opened c2s session for admin@localhost/xmppServices
+2023-11-20 14:07:10.078522+00:00 [info] <0.558.0>@ejabberd_listener:accept/7:344 (<0.1583.0>) Accepted connection [::ffff:192.168.65.1]:47676 -> [::ffff:172.21.0.3]:5280
+2023-11-20 14:07:10.083646+00:00 [info] <0.1583.0>@mod_http_api:log/3:511 API call get_offline_count [{<<"user">>,<<"bob">>},
+                            {<<"host">>,<<"localhost">>}] from ::ffff:192.168.65.1:47676
+2023-11-20 14:08:27.705354+00:00 [info] <0.1582.0>@ejabberd_c2s:process_terminated/2:295 (tcp|<0.1582.0>) Closing c2s session for admin@localhost/xmppServices: Stream reset by peer
+2023-11-20 14:08:33.674268+00:00 [info] <0.554.0>@ejabberd_listener:accept/7:344 (<0.1596.0>) Accepted connection [::ffff:192.168.65.1]:31043 -> [::ffff:172.21.0.3]:5222
+2023-11-20 14:08:33.857311+00:00 [info] <0.1596.0>@ejabberd_c2s:process_auth_result/3:272 (tcp|<0.1596.0>) Accepted c2s SCRAM-SHA-1 authentication for admin@localhost by mnesia backend from ::ffff:192.168.65.1
+2023-11-20 14:08:33.871665+00:00 [info] <0.1596.0>@ejabberd_c2s:bind/2:450 (tcp|<0.1596.0>) Opened c2s session for admin@localhost/xmppServices
+2023-11-20 14:08:41.812795+00:00 [info] <0.558.0>@ejabberd_listener:accept/7:344 (<0.1597.0>) Accepted connection [::ffff:192.168.65.1]:47688 -> [::ffff:172.21.0.3]:5280
+2023-11-20 14:08:41.815111+00:00 [info] <0.1597.0>@mod_http_api:log/3:511 API call get_offline_count [{<<"user">>,<<"bob">>},
+                            {<<"host">>,<<"localhost">>}] from ::ffff:192.168.65.1:47688
+2023-11-20 14:31:27.190990+00:00 [info] <0.1596.0>@ejabberd_c2s:process_terminated/2:295 (tcp|<0.1596.0>) Closing c2s session for admin@localhost/xmppServices: Stream reset by peer

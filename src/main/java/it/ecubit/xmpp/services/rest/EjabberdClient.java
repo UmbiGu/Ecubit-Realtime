@@ -5,6 +5,7 @@ import it.ecubit.xmpp.services.exception.ExceptionGeneric;
 import it.ecubit.xmpp.services.rest.entity.*;
 import it.ecubit.xmpp.services.rest.entity.room.CreateRoom;
 import it.ecubit.xmpp.services.rest.entity.room.GetRoomOccupants;
+import it.ecubit.xmpp.services.rest.entity.room.RoomOccupants;
 import it.ecubit.xmpp.services.rest.wrapperEntity.*;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -97,8 +98,7 @@ public class EjabberdClient {
 		return getLastActivity;
 	}
 
-	public ResponseOfflineCount getOfflineCount() throws IOException {
-		GetOfflineCount getOfflineCount = new GetOfflineCount("admin", "localhost");
+	public ResponseOfflineCount getOfflineCount(GetOfflineCount getOfflineCount) throws IOException {
 		Call<ResponseOfflineCount> offlineCount = ejabberdApi.getOfflineCount(getOfflineCount);
 		Response<ResponseOfflineCount> offlineCountResponse = offlineCount.execute();
 		ResponseOfflineCount offlineCountBody = offlineCountResponse.body();
@@ -122,20 +122,19 @@ public class EjabberdClient {
 		return changePaswordUser;
 	}
 
-	public String createRoom()throws IOException{
-	CreateRoom createRoom = new CreateRoom("room2", "localhost", "localhost");
+	public String createRoom(CreateRoom createRoom)throws IOException{
 	Call<String> create = ejabberdApi.createRoom(createRoom);
 	Response<String> createRoomResponse = create.execute();
 	String createStatus = createRoomResponse.body();
+	if (createStatus.equals("0"))
+		System.out.println("Room created");
 	return createStatus;
 }
 	
-	public List getRoomOccupants() throws IOException{
-		GetRoomOccupants getRoomOccupants = new GetRoomOccupants("room1", "muc.localhost.com");
-		Call<List> getRoomOccupantsCall = ejabberdApi.getRoomOccupants(getRoomOccupants);
-		Response<List> getRoomOccupantsResponse = getRoomOccupantsCall.execute();
-		List getRoomOccupantsBody = getRoomOccupantsResponse.body();
-		return getRoomOccupantsBody;
+	public List<RoomOccupants> getRoomOccupants(GetRoomOccupants getRoomOccupants) throws IOException{
+		Call<List<RoomOccupants>> getRoomOccupantsCall = ejabberdApi.getRoomOccupants(getRoomOccupants);
+		Response<List<RoomOccupants>> getRoomOccupantsResponse = getRoomOccupantsCall.execute();
+		return getRoomOccupantsResponse.body();
 	}
 
 	public String accountCheck() throws IOException{

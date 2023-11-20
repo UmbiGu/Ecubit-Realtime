@@ -5,6 +5,7 @@ package it.ecubit.xmpp.services.rest;
 import it.ecubit.xmpp.services.rest.entity.*;
 import it.ecubit.xmpp.services.rest.entity.room.CreateRoom;
 import it.ecubit.xmpp.services.rest.entity.room.GetRoomOccupants;
+import it.ecubit.xmpp.services.rest.entity.room.RoomOccupants;
 import it.ecubit.xmpp.services.rest.wrapperEntity.*;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -69,5 +70,5 @@ public interface EjabberdApi {
 
     @Headers({"Accept: application/json"})
     @POST("get_room_occupants")
-    public Call<List> getRoomOccupants(@Body GetRoomOccupants getRoomOccupants);
+    public Call<List<RoomOccupants>> getRoomOccupants(@Body GetRoomOccupants getRoomOccupants);
 }

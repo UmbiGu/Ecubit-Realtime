@@ -3,8 +3,13 @@ package it.ecubit.xmpp.services.service;
 
 import it.ecubit.xmpp.services.exception.ExceptionGeneric;
 import it.ecubit.xmpp.services.rest.EjabberdClient;
+import it.ecubit.xmpp.services.rest.entity.GetOfflineCount;
 import it.ecubit.xmpp.services.rest.entity.User;
+import it.ecubit.xmpp.services.rest.entity.room.CreateRoom;
+import it.ecubit.xmpp.services.rest.entity.room.GetRoomOccupants;
+import it.ecubit.xmpp.services.rest.entity.room.RoomOccupants;
 import it.ecubit.xmpp.services.rest.wrapperEntity.NumUserConnected;
+import it.ecubit.xmpp.services.rest.wrapperEntity.ResponseOfflineCount;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -20,16 +25,22 @@ public class EjabberdApiService {
         EjabberdClient.getInstance(host).registerUser(user);
     }
     public List<User> getUsers() throws IOException {
-       List<User> list = EjabberdClient.getInstance(host).getRegisterUsers();
-        return list;
+		return EjabberdClient.getInstance(host).getRegisterUsers();
     }
     public NumUserConnected getConnectedUsersNumber() throws IOException {
-        NumUserConnected numUserConnected = EjabberdClient.getInstance(host).getConnectedUsersNumber();
-        return numUserConnected;
+		return EjabberdClient.getInstance(host).getConnectedUsersNumber();
     }
 
+    public ResponseOfflineCount getOfflineCount(GetOfflineCount getOfflineCount) throws IOException{
+		return EjabberdClient.getInstance(host).getOfflineCount(getOfflineCount);
+    }
 
+    public String createRoom(CreateRoom createRoom) throws IOException {
+        return EjabberdClient.getInstance(host).createRoom(createRoom);
+    }
 
-
+    public List<RoomOccupants> getRoomOccupants(GetRoomOccupants getRoomOccupants) throws IOException {
+        return EjabberdClient.getInstance(host).getRoomOccupants(getRoomOccupants);
+    }
 
 }
