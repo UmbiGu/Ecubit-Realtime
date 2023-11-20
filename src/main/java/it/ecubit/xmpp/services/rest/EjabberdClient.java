@@ -151,8 +151,7 @@ public class EjabberdClient {
 		return passwordCheckResponse.body();
 	}
 
-	public UnbanWrap unbanIp() throws IOException {
-		UnbanIp unbanIp = new UnbanIp("localhost");
+	public UnbanWrap unbanIp(UnbanIp unbanIp) throws IOException {
 		Call<UnbanWrap> unbanIpApi = ejabberdApi.unbanIp(unbanIp);
 		Response<UnbanWrap> unbanIpResponse = unbanIpApi.execute();
 		return unbanIpResponse.body();

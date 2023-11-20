@@ -4,6 +4,7 @@ package it.ecubit.xmpp.services.service;
 import it.ecubit.xmpp.services.exception.ExceptionGeneric;
 import it.ecubit.xmpp.services.rest.EjabberdClient;
 import it.ecubit.xmpp.services.rest.entity.GetOfflineCount;
+import it.ecubit.xmpp.services.rest.entity.UnbanIp;
 import it.ecubit.xmpp.services.rest.entity.User;
 import it.ecubit.xmpp.services.rest.entity.UserCheck;
 import it.ecubit.xmpp.services.rest.entity.room.CreateRoom;
@@ -11,6 +12,7 @@ import it.ecubit.xmpp.services.rest.entity.room.GetRoomOccupants;
 import it.ecubit.xmpp.services.rest.entity.room.RoomOccupants;
 import it.ecubit.xmpp.services.rest.wrapperEntity.NumUserConnected;
 import it.ecubit.xmpp.services.rest.wrapperEntity.ResponseOfflineCount;
+import it.ecubit.xmpp.services.rest.wrapperEntity.UnbanWrap;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -50,5 +52,9 @@ public class EjabberdApiService {
 
     public String passwordCheck(User user) throws IOException {
         return EjabberdClient.getInstance(host).passwordCheck(user);
+    }
+
+    public UnbanWrap unbanIp(UnbanIp unbanIp) throws IOException {
+        return EjabberdClient.getInstance(host).unbanIp(unbanIp);
     }
 }

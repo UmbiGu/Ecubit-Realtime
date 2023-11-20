@@ -2,6 +2,7 @@ package it.ecubit.xmpp.services.controller;
 
 import it.ecubit.xmpp.services.exception.ExceptionGeneric;
 import it.ecubit.xmpp.services.rest.entity.GetOfflineCount;
+import it.ecubit.xmpp.services.rest.entity.UnbanIp;
 import it.ecubit.xmpp.services.rest.entity.User;
 import it.ecubit.xmpp.services.rest.entity.UserCheck;
 import it.ecubit.xmpp.services.rest.entity.room.CreateRoom;
@@ -9,6 +10,7 @@ import it.ecubit.xmpp.services.rest.entity.room.GetRoomOccupants;
 import it.ecubit.xmpp.services.rest.entity.room.RoomOccupants;
 import it.ecubit.xmpp.services.rest.wrapperEntity.NumUserConnected;
 import it.ecubit.xmpp.services.rest.wrapperEntity.ResponseOfflineCount;
+import it.ecubit.xmpp.services.rest.wrapperEntity.UnbanWrap;
 import it.ecubit.xmpp.services.service.EjabberdApiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -84,8 +86,13 @@ public class UserRestServiceController {
         return ejabberdApiService.passwordCheck(user);
     }
 
+    @CrossOrigin
+    @PostMapping("/unban_ip")
+    public UnbanWrap unbanIp(@RequestBody UnbanIp unbanIp) throws ExceptionGeneric, IOException{
+        return ejabberdApiService.unbanIp(unbanIp);
+    }
 
-	
+
 //    @CrossOrigin
 //    @PostMapping(path = "/users/broadcast") // Map ONLY GET Requests
 //    public @ResponseBody
