@@ -36,8 +36,8 @@ public class UserRestServiceController {
     @CrossOrigin
     @PostMapping("/registerUser") // Map ONLY GET Requests
     public User registerUser(@RequestBody User user) throws ExceptionGeneric, IOException {
-    ejabberdApiService.registerUser(user);
-    return user;
+        ejabberdApiService.registerUser(user);
+        return user;
     }
 
     @CrossOrigin
@@ -83,6 +83,9 @@ public class UserRestServiceController {
     public String passwordCheck(@RequestBody User user) throws ExceptionGeneric, IOException{
         return ejabberdApiService.passwordCheck(user);
     }
+
+
+	
 //    @CrossOrigin
 //    @PostMapping(path = "/users/broadcast") // Map ONLY GET Requests
 //    public @ResponseBody
