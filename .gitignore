@@ -1,0 +1,13 @@
+/.gradle
+/.idea
+/build
+/docker-ejabberd
+/gradle
+/libs
+/out
+/build.gradle
+/docker-ejabberd.zip
+/gradlew
+/gradlew.bat
+/settings.gradle
+
