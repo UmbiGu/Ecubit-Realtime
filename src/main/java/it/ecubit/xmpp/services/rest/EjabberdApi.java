@@ -69,5 +69,4 @@ public interface EjabberdApi {
     @Headers({"Accept: application/json"})
     @POST("get_room_occupants")
     public Call<List> getRoomOccupants(@Body GetRoomOccupants getRoomOccupants);
-    //
 }

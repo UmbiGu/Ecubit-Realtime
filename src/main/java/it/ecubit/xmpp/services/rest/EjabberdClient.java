@@ -147,8 +147,7 @@ public class EjabberdClient {
 		return userCheckResponse.body();
 	}
 
-	public String passwordCheck() throws IOException{
-		User user = new User("ugo", "localhost", "ugo1");
+	public String passwordCheck(User user) throws IOException{
 		Call<String> passwordCheckApi = ejabberdApi.passwordCheck(user);
 		Response<String> passwordCheckResponse = passwordCheckApi.execute();
 		return passwordCheckResponse.body();

@@ -8,6 +8,7 @@ import it.ecubit.xmpp.services.rest.wrapperEntity.NumUserConnected;
 import it.ecubit.xmpp.services.rest.wrapperEntity.ResponseOfflineCount;
 import it.ecubit.xmpp.services.rest.wrapperEntity.UserInfo;
 import it.ecubit.xmpp.services.service.EjabberdApiService;
+import it.ecubit.xmpp.services.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
@@ -16,10 +17,12 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-public class UserRestServiceController {
+public class UserRestApiController {
 
     @Autowired
     EjabberdApiService ejabberdApiService;
+    @Autowired(required = true)
+    UserService userService;
     @Value("${xmpp.host}")
     private String host;
 
@@ -33,7 +36,8 @@ public class UserRestServiceController {
     @PostMapping("/registerUser") // Map ONLY GET Requests
     public User registerUser(@RequestBody User user) throws ExceptionGeneric, IOException {
     ejabberdApiService.registerUser(user);
-    return user;
+
+    return userService.addUser(user);
     }
 //Lista degli utenti registrati
     @CrossOrigin
