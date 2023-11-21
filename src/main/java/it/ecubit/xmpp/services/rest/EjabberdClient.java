@@ -34,6 +34,7 @@ public class EjabberdClient {
 			client = new EjabberdClient(host);
 		return client;
 	}
+	//Lista degli utenti connessi
 	public List<UserInfo> connectedUsers() throws IOException {
 		Call<List<UserInfo>> userInfoList = ejabberdApi.getUserInfo();
 		Response<List<UserInfo>> response = userInfoList.execute();
@@ -97,9 +98,8 @@ public class EjabberdClient {
 		return getLastActivity;
 	}
 
-	public ResponseOfflineCount getOfflineCount() throws IOException {
-		GetOfflineCount getOfflineCount = new GetOfflineCount("admin", "localhost");
-		Call<ResponseOfflineCount> offlineCount = ejabberdApi.getOfflineCount(getOfflineCount);
+	public ResponseOfflineCount getOfflineCount(GetOfflineCount user) throws IOException {
+		Call<ResponseOfflineCount> offlineCount = ejabberdApi.getOfflineCount(user);
 		Response<ResponseOfflineCount> offlineCountResponse = offlineCount.execute();
 		ResponseOfflineCount offlineCountBody = offlineCountResponse.body();
 		System.out.println();
@@ -122,11 +122,13 @@ public class EjabberdClient {
 		return changePaswordUser;
 	}
 
-	public String createRoom()throws IOException{
-	CreateRoom createRoom = new CreateRoom("room2", "localhost", "localhost");
-	Call<String> create = ejabberdApi.createRoom(createRoom);
+	public String createRoom(CreateRoom room)throws IOException{
+	Call<String> create = ejabberdApi.createRoom(room);
 	Response<String> createRoomResponse = create.execute();
 	String createStatus = createRoomResponse.body();
+		if(createStatus.equals("0"))
+			createStatus = "Room creata con successo" + room;
+		else createStatus = "Errore nella creazione della room";
 	return createStatus;
 }
 	
@@ -145,8 +147,7 @@ public class EjabberdClient {
 		return userCheckResponse.body();
 	}
 
-	public String passwordCheck() throws IOException{
-		User user = new User("ugo", "localhost", "ugo1");
+	public String passwordCheck(User user) throws IOException{
 		Call<String> passwordCheckApi = ejabberdApi.passwordCheck(user);
 		Response<String> passwordCheckResponse = passwordCheckApi.execute();
 		return passwordCheckResponse.body();

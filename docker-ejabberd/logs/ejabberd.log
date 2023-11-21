@@ -1666,3 +1666,103 @@
 2023-11-17 16:06:19.225660+00:00 [info] <0.175.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:1883 for mod_mqtt
 2023-11-17 16:06:19.228467+00:00 [info] <0.1290.0>@ejabberd_c2s:process_terminated/2:295 (unknown) Closing c2s session for admin@localhost/xmppServices: Stream closed by local host: system-shutdown
 2023-11-17 16:06:19.381405+00:00 [info] <0.175.0>@ejabberd_app:stop/1:112 ejabberd 23.10.0 is stopped in the node ejabberd@localhost
+2023-11-21 08:51:35.651610+00:00 [info] <0.175.0>@ejabberd_config:load/1:82 Loading configuration from /home/ejabberd/conf/ejabberd.yml
+2023-11-21 08:51:35.695455+00:00 [warning] <0.175.0>@ejabberd_config_transformer:warn_removed_option/1:557 Option 'log_rotate_date' is deprecated and has no effect anymore. Please remove it from the configuration.
+2023-11-21 08:51:35.695542+00:00 [warning] <0.175.0>@ejabberd_config_transformer:warn_removed_option/1:557 Option 'log_rate_limit' is deprecated and has no effect anymore. Please remove it from the configuration.
+2023-11-21 08:51:36.179914+00:00 [info] <0.175.0>@ejabberd_config:load/1:89 Configuration loaded successfully
+2023-11-21 08:51:36.804076+00:00 [info] <0.540.0>@ejabberd_systemd:init/1:94 Got no NOTIFY_SOCKET, notifications disabled
+2023-11-21 08:51:37.049111+00:00 [info] <0.539.0>@gen_mod:start_modules/0:141 Loading modules for localhost
+2023-11-21 08:51:37.053276+00:00 [warning] <0.539.0>@mod_mam:start/2:113 Mnesia backend for mod_mam is not recommended: it's limited to 2GB and often gets corrupted when reaching this limit. SQL backend is recommended. Namely, for small servers SQLite is a preferred choice because it's very easy to configure.
+2023-11-21 08:51:37.571616+00:00 [info] <0.679.0>@mod_mqtt:init_topic_cache/2:644 Building MQTT cache for localhost, this may take a while
+2023-11-21 08:51:37.583453+00:00 [warning] <0.687.0>@ejabberd_captcha:get_prog_name/0:444 The option captcha_cmd is not configured, but some module wants to use the CAPTCHA feature.
+2023-11-21 08:51:37.657301+00:00 [info] <0.175.0>@ejabberd_cluster_mnesia:wait_for_sync/1:123 Waiting for Mnesia synchronization to complete
+2023-11-21 08:51:37.717989+00:00 [warning] <0.571.0>@ejabberd_pkix:log_warnings/1:393 Invalid certificate in /home/ejabberd/conf/server.pem: at line 53: self-signed certificate
+2023-11-21 08:51:37.767818+00:00 [warning] <0.571.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching pubsub.localhost
+2023-11-21 08:51:37.768013+00:00 [warning] <0.571.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching proxy.localhost
+2023-11-21 08:51:37.768073+00:00 [warning] <0.571.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching conference.localhost
+2023-11-21 08:51:37.768158+00:00 [warning] <0.571.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching upload.localhost
+2023-11-21 08:51:37.772464+00:00 [info] <0.175.0>@ejabberd_app:start/2:63 ejabberd 23.10.0 is started in the node ejabberd@localhost in 2.27s
+2023-11-21 08:51:37.773116+00:00 [info] <0.568.0>@ejabberd_listener:init/4:163 Start accepting TLS connections at [::]:5443 for ejabberd_http
+2023-11-21 08:51:37.773118+00:00 [info] <0.566.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:5222 for ejabberd_c2s
+2023-11-21 08:51:37.773137+00:00 [info] <0.567.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:5269 for ejabberd_s2s_in
+2023-11-21 08:51:37.773158+00:00 [info] <0.683.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at 172.20.0.3:7777 for mod_proxy65_stream
+2023-11-21 08:51:37.773267+00:00 [info] <0.569.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:5280 for ejabberd_http
+2023-11-21 08:51:37.773269+00:00 [info] <0.570.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:1883 for mod_mqtt
+2023-11-21 08:52:16.025459+00:00 [info] <0.566.0>@ejabberd_listener:accept/7:344 (<0.756.0>) Accepted connection [::ffff:172.20.0.1]:35774 -> [::ffff:172.20.0.3]:5222
+2023-11-21 08:52:16.347188+00:00 [info] <0.756.0>@ejabberd_c2s:process_auth_result/3:272 (tcp|<0.756.0>) Accepted c2s SCRAM-SHA-1 authentication for admin@localhost by mnesia backend from ::ffff:172.20.0.1
+2023-11-21 08:52:16.378043+00:00 [info] <0.756.0>@ejabberd_c2s:bind/2:450 (tcp|<0.756.0>) Opened c2s session for admin@localhost/xmppServices
+2023-11-21 08:52:30.562328+00:00 [info] <0.569.0>@ejabberd_listener:accept/7:344 (<0.759.0>) Accepted connection [::ffff:172.20.0.1]:56514 -> [::ffff:172.20.0.3]:5280
+2023-11-21 08:52:30.570550+00:00 [info] <0.759.0>@mod_http_api:log/3:511 API call registered_users [{<<"host">>,<<"localhost">>}] from ::ffff:172.20.0.1:56514
+2023-11-21 09:04:40.988375+00:00 [info] <0.756.0>@mod_stream_mgmt:transition_to_pending/2:439 (tcp|<0.756.0>) Closing c2s connection for admin@localhost/xmppServices: Connection failed: connection closed; waiting 300 seconds for stream resumption
+2023-11-21 09:09:40.990380+00:00 [info] <0.756.0>@ejabberd_c2s:process_terminated/2:295 (unknown) Closing c2s session for admin@localhost/xmppServices: Stream closed by local host: Timed out waiting for stream resumption (connection-timeout)
+2023-11-21 10:07:25.300703+00:00 [info] <0.566.0>@ejabberd_listener:accept/7:344 (<0.830.0>) Accepted connection [::ffff:172.20.0.1]:58650 -> [::ffff:172.20.0.3]:5222
+2023-11-21 10:07:25.433410+00:00 [info] <0.830.0>@ejabberd_c2s:process_auth_result/3:272 (tcp|<0.830.0>) Accepted c2s SCRAM-SHA-1 authentication for admin@localhost by mnesia backend from ::ffff:172.20.0.1
+2023-11-21 10:07:25.450145+00:00 [info] <0.830.0>@ejabberd_c2s:bind/2:450 (tcp|<0.830.0>) Opened c2s session for admin@localhost/xmppServices
+2023-11-21 10:11:30.565388+00:00 [info] <0.830.0>@mod_stream_mgmt:transition_to_pending/2:439 (tcp|<0.830.0>) Closing c2s connection for admin@localhost/xmppServices: Connection failed: connection closed; waiting 300 seconds for stream resumption
+2023-11-21 10:12:57.310743+00:00 [notice] <0.67.0> SIGTERM received - shutting down
+
+2023-11-21 10:12:57.313258+00:00 [info] <0.175.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:5222 for ejabberd_c2s
+2023-11-21 10:12:57.313824+00:00 [info] <0.175.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:5269 for ejabberd_s2s_in
+2023-11-21 10:12:57.314302+00:00 [info] <0.175.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TLS connections at [::]:5443 for ejabberd_http
+2023-11-21 10:12:57.314621+00:00 [info] <0.175.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:5280 for ejabberd_http
+2023-11-21 10:12:57.315068+00:00 [info] <0.175.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:1883 for mod_mqtt
+2023-11-21 10:12:57.316842+00:00 [info] <0.830.0>@ejabberd_c2s:process_terminated/2:295 (unknown) Closing c2s session for admin@localhost/xmppServices: Stream closed by local host: system-shutdown
+2023-11-21 10:12:57.383711+00:00 [info] <0.175.0>@ejabberd_app:stop/1:112 ejabberd 23.10.0 is stopped in the node ejabberd@localhost
+2023-11-21 10:13:10.707673+00:00 [info] <0.175.0>@ejabberd_config:load/1:82 Loading configuration from /home/ejabberd/conf/ejabberd.yml
+2023-11-21 10:13:10.758047+00:00 [warning] <0.175.0>@ejabberd_config_transformer:warn_removed_option/1:557 Option 'log_rotate_date' is deprecated and has no effect anymore. Please remove it from the configuration.
+2023-11-21 10:13:10.758169+00:00 [warning] <0.175.0>@ejabberd_config_transformer:warn_removed_option/1:557 Option 'log_rate_limit' is deprecated and has no effect anymore. Please remove it from the configuration.
+2023-11-21 10:13:11.384892+00:00 [info] <0.175.0>@ejabberd_config:load/1:89 Configuration loaded successfully
+2023-11-21 10:13:11.969630+00:00 [info] <0.539.0>@ejabberd_systemd:init/1:94 Got no NOTIFY_SOCKET, notifications disabled
+2023-11-21 10:13:12.178249+00:00 [info] <0.538.0>@gen_mod:start_modules/0:141 Loading modules for localhost
+2023-11-21 10:13:12.183885+00:00 [warning] <0.538.0>@mod_mam:start/2:113 Mnesia backend for mod_mam is not recommended: it's limited to 2GB and often gets corrupted when reaching this limit. SQL backend is recommended. Namely, for small servers SQLite is a preferred choice because it's very easy to configure.
+2023-11-21 10:13:12.639396+00:00 [info] <0.678.0>@mod_mqtt:init_topic_cache/2:644 Building MQTT cache for localhost, this may take a while
+2023-11-21 10:13:12.647745+00:00 [warning] <0.686.0>@ejabberd_captcha:get_prog_name/0:444 The option captcha_cmd is not configured, but some module wants to use the CAPTCHA feature.
+2023-11-21 10:13:12.697129+00:00 [info] <0.175.0>@ejabberd_cluster_mnesia:wait_for_sync/1:123 Waiting for Mnesia synchronization to complete
+2023-11-21 10:13:12.741278+00:00 [warning] <0.570.0>@ejabberd_pkix:log_warnings/1:393 Invalid certificate in /home/ejabberd/conf/server.pem: at line 53: self-signed certificate
+2023-11-21 10:13:12.772530+00:00 [warning] <0.570.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching pubsub.localhost
+2023-11-21 10:13:12.772692+00:00 [warning] <0.570.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching proxy.localhost
+2023-11-21 10:13:12.772754+00:00 [warning] <0.570.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching conference.localhost
+2023-11-21 10:13:12.772831+00:00 [warning] <0.570.0>@ejabberd_pkix:check_domain_certfiles/1:312 No certificate found matching upload.localhost
+2023-11-21 10:13:12.774713+00:00 [info] <0.175.0>@ejabberd_app:start/2:63 ejabberd 23.10.0 is started in the node ejabberd@localhost in 2.21s
+2023-11-21 10:13:12.776061+00:00 [info] <0.565.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:5222 for ejabberd_c2s
+2023-11-21 10:13:12.776068+00:00 [info] <0.569.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:1883 for mod_mqtt
+2023-11-21 10:13:12.776067+00:00 [info] <0.566.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:5269 for ejabberd_s2s_in
+2023-11-21 10:13:12.776268+00:00 [info] <0.568.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at [::]:5280 for ejabberd_http
+2023-11-21 10:13:12.776264+00:00 [info] <0.567.0>@ejabberd_listener:init/4:163 Start accepting TLS connections at [::]:5443 for ejabberd_http
+2023-11-21 10:13:12.776370+00:00 [info] <0.682.0>@ejabberd_listener:init/4:163 Start accepting TCP connections at 172.20.0.3:7777 for mod_proxy65_stream
+2023-11-21 10:14:13.358080+00:00 [info] <0.565.0>@ejabberd_listener:accept/7:344 (<0.755.0>) Accepted connection [::ffff:172.20.0.1]:48584 -> [::ffff:172.20.0.3]:5222
+2023-11-21 10:14:13.515039+00:00 [info] <0.755.0>@ejabberd_c2s:process_auth_result/3:272 (tcp|<0.755.0>) Accepted c2s SCRAM-SHA-1 authentication for admin@localhost by mnesia backend from ::ffff:172.20.0.1
+2023-11-21 10:14:13.547693+00:00 [info] <0.755.0>@ejabberd_c2s:bind/2:450 (tcp|<0.755.0>) Opened c2s session for admin@localhost/xmppServices
+2023-11-21 10:14:50.448108+00:00 [info] <0.568.0>@ejabberd_listener:accept/7:344 (<0.758.0>) Accepted connection [::ffff:172.20.0.1]:50928 -> [::ffff:172.20.0.3]:5280
+2023-11-21 10:14:50.461433+00:00 [info] <0.758.0>@mod_http_api:log/3:511 API call register [{<<"user">>,<<"umbi">>},
+                   {<<"host">>,<<"localhost">>},
+                   {<<"password">>,<<"umbi">>}] from ::ffff:172.20.0.1:50928
+2023-11-21 10:17:32.744908+00:00 [info] <0.755.0>@mod_stream_mgmt:transition_to_pending/2:439 (tcp|<0.755.0>) Closing c2s connection for admin@localhost/xmppServices: Connection failed: connection closed; waiting 300 seconds for stream resumption
+2023-11-21 10:17:41.883622+00:00 [info] <0.565.0>@ejabberd_listener:accept/7:344 (<0.766.0>) Accepted connection [::ffff:172.20.0.1]:49628 -> [::ffff:172.20.0.3]:5222
+2023-11-21 10:17:41.972649+00:00 [info] <0.766.0>@ejabberd_c2s:process_auth_result/3:272 (tcp|<0.766.0>) Accepted c2s SCRAM-SHA-1 authentication for admin@localhost by mnesia backend from ::ffff:172.20.0.1
+2023-11-21 10:17:41.981517+00:00 [info] <0.766.0>@ejabberd_c2s:bind/2:450 (tcp|<0.766.0>) Opened c2s session for admin@localhost/xmppServices
+2023-11-21 10:17:41.982022+00:00 [info] <0.755.0>@ejabberd_c2s:process_terminated/2:295 (unknown) Closing c2s session for admin@localhost/xmppServices: Stream closed by local host: Replaced by new connection (conflict)
+2023-11-21 10:17:52.417389+00:00 [info] <0.568.0>@ejabberd_listener:accept/7:344 (<0.767.0>) Accepted connection [::ffff:172.20.0.1]:39548 -> [::ffff:172.20.0.3]:5280
+2023-11-21 10:17:52.427067+00:00 [info] <0.767.0>@mod_http_api:log/3:511 API call register [{<<"user">>,<<"repo">>},
+                   {<<"host">>,<<"localhost">>},
+                   {<<"password">>,<<"repo">>}] from ::ffff:172.20.0.1:39548
+2023-11-21 10:19:40.460803+00:00 [info] <0.766.0>@mod_stream_mgmt:transition_to_pending/2:439 (tcp|<0.766.0>) Closing c2s connection for admin@localhost/xmppServices: Connection failed: connection closed; waiting 300 seconds for stream resumption
+2023-11-21 10:19:49.945410+00:00 [info] <0.565.0>@ejabberd_listener:accept/7:344 (<0.774.0>) Accepted connection [::ffff:172.20.0.1]:52772 -> [::ffff:172.20.0.3]:5222
+2023-11-21 10:19:50.043750+00:00 [info] <0.774.0>@ejabberd_c2s:process_auth_result/3:272 (tcp|<0.774.0>) Accepted c2s SCRAM-SHA-1 authentication for admin@localhost by mnesia backend from ::ffff:172.20.0.1
+2023-11-21 10:19:50.054568+00:00 [info] <0.774.0>@ejabberd_c2s:bind/2:450 (tcp|<0.774.0>) Opened c2s session for admin@localhost/xmppServices
+2023-11-21 10:19:50.055131+00:00 [info] <0.766.0>@ejabberd_c2s:process_terminated/2:295 (unknown) Closing c2s session for admin@localhost/xmppServices: Stream closed by local host: Replaced by new connection (conflict)
+2023-11-21 10:20:00.676130+00:00 [info] <0.568.0>@ejabberd_listener:accept/7:344 (<0.775.0>) Accepted connection [::ffff:172.20.0.1]:55240 -> [::ffff:172.20.0.3]:5280
+2023-11-21 10:20:00.685110+00:00 [info] <0.775.0>@mod_http_api:log/3:511 API call register [{<<"user">>,<<"database">>},
+                   {<<"host">>,<<"localhost">>},
+                   {<<"password">>,<<"database">>}] from ::ffff:172.20.0.1:55240
+2023-11-21 10:21:02.325064+00:00 [info] <0.774.0>@mod_stream_mgmt:transition_to_pending/2:439 (tcp|<0.774.0>) Closing c2s connection for admin@localhost/xmppServices: Connection failed: connection closed; waiting 300 seconds for stream resumption
+2023-11-21 10:26:02.325649+00:00 [info] <0.774.0>@ejabberd_c2s:process_terminated/2:295 (unknown) Closing c2s session for admin@localhost/xmppServices: Stream closed by local host: Timed out waiting for stream resumption (connection-timeout)
+2023-11-21 10:28:21.457165+00:00 [info] <0.565.0>@ejabberd_listener:accept/7:344 (<0.791.0>) Accepted connection [::ffff:172.20.0.1]:58384 -> [::ffff:172.20.0.3]:5222
+2023-11-21 10:28:21.546198+00:00 [info] <0.791.0>@ejabberd_c2s:process_auth_result/3:272 (tcp|<0.791.0>) Accepted c2s SCRAM-SHA-1 authentication for admin@localhost by mnesia backend from ::ffff:172.20.0.1
+2023-11-21 10:28:21.555416+00:00 [info] <0.791.0>@ejabberd_c2s:bind/2:450 (tcp|<0.791.0>) Opened c2s session for admin@localhost/xmppServices
+2023-11-21 10:28:26.610478+00:00 [info] <0.568.0>@ejabberd_listener:accept/7:344 (<0.792.0>) Accepted connection [::ffff:172.20.0.1]:48018 -> [::ffff:172.20.0.3]:5280
+2023-11-21 10:28:26.619789+00:00 [info] <0.792.0>@mod_http_api:log/3:511 API call register [{<<"user">>,<<"database">>},
+                   {<<"host">>,<<"localhost">>},
+                   {<<"password">>,<<"database">>}] from ::ffff:172.20.0.1:48018
+2023-11-21 13:52:42.906762+00:00 [info] <0.791.0>@mod_stream_mgmt:transition_to_pending/2:439 (tcp|<0.791.0>) Closing c2s connection for admin@localhost/xmppServices: Connection failed: connection closed; waiting 300 seconds for stream resumption
+2023-11-21 13:57:42.914424+00:00 [info] <0.791.0>@ejabberd_c2s:process_terminated/2:295 (unknown) Closing c2s session for admin@localhost/xmppServices: Stream closed by local host: Timed out waiting for stream resumption (connection-timeout)
