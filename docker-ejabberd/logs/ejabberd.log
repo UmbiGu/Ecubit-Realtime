@@ -1766,3 +1766,11 @@
                    {<<"password">>,<<"database">>}] from ::ffff:172.20.0.1:48018
 2023-11-21 13:52:42.906762+00:00 [info] <0.791.0>@mod_stream_mgmt:transition_to_pending/2:439 (tcp|<0.791.0>) Closing c2s connection for admin@localhost/xmppServices: Connection failed: connection closed; waiting 300 seconds for stream resumption
 2023-11-21 13:57:42.914424+00:00 [info] <0.791.0>@ejabberd_c2s:process_terminated/2:295 (unknown) Closing c2s session for admin@localhost/xmppServices: Stream closed by local host: Timed out waiting for stream resumption (connection-timeout)
+2023-11-21 14:22:36.737146+00:00 [notice] <0.67.0> SIGTERM received - shutting down
+
+2023-11-21 14:22:36.741092+00:00 [info] <0.175.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:5222 for ejabberd_c2s
+2023-11-21 14:22:36.741737+00:00 [info] <0.175.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:5269 for ejabberd_s2s_in
+2023-11-21 14:22:36.742323+00:00 [info] <0.175.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TLS connections at [::]:5443 for ejabberd_http
+2023-11-21 14:22:36.743095+00:00 [info] <0.175.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:5280 for ejabberd_http
+2023-11-21 14:22:36.743342+00:00 [info] <0.175.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:1883 for mod_mqtt
+2023-11-21 14:22:36.858324+00:00 [info] <0.175.0>@ejabberd_app:stop/1:112 ejabberd 23.10.0 is stopped in the node ejabberd@localhost
