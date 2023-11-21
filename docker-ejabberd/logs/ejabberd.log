@@ -1765,3 +1765,4 @@
                    {<<"host">>,<<"localhost">>},
                    {<<"password">>,<<"database">>}] from ::ffff:172.20.0.1:48018
 2023-11-21 13:52:42.906762+00:00 [info] <0.791.0>@mod_stream_mgmt:transition_to_pending/2:439 (tcp|<0.791.0>) Closing c2s connection for admin@localhost/xmppServices: Connection failed: connection closed; waiting 300 seconds for stream resumption
+2023-11-21 13:57:42.914424+00:00 [info] <0.791.0>@ejabberd_c2s:process_terminated/2:295 (unknown) Closing c2s session for admin@localhost/xmppServices: Stream closed by local host: Timed out waiting for stream resumption (connection-timeout)
