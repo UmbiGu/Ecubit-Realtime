@@ -12,6 +12,7 @@ import it.ecubit.xmpp.services.rest.wrapperEntity.NumUserConnected;
 import it.ecubit.xmpp.services.rest.wrapperEntity.ResponseOfflineCount;
 import it.ecubit.xmpp.services.rest.wrapperEntity.UnbanWrap;
 import it.ecubit.xmpp.services.service.EjabberdApiService;
+import it.ecubit.xmpp.services.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +25,8 @@ public class UserRestApiController {
 
     @Autowired
     EjabberdApiService ejabberdApiService;
+    @Autowired(required = true)
+    UserService userService;
     @Value("${xmpp.host}")
     private String host;
 
@@ -33,27 +36,29 @@ public class UserRestApiController {
     @Value("${xmpp.ejabberd.multicast}")
     private String multicast;
 
+    //Registrazione di un utente
     @CrossOrigin
     @PostMapping("/registerUser") // Map ONLY GET Requests
     public User registerUser(@RequestBody User user) throws ExceptionGeneric, IOException {
         ejabberdApiService.registerUser(user);
-        return user;
+        return userService.addUser(user);
     }
 
+    //Lista degli utenti registrati
     @CrossOrigin
     @GetMapping("/getUsers")
     public List<User> getUsers() throws IOException {
-        List<User> list = ejabberdApiService.getUsers();
-        return list;
+		return ejabberdApiService.getUsers();
     }
 
+    //Numero degli utenti connessi
     @CrossOrigin
     @GetMapping("/getConnectedUsersNumbers")
     public NumUserConnected getConnectedUsersNumber() throws IOException {
-        NumUserConnected numUserConnected = ejabberdApiService.getConnectedUsersNumber();
-        return numUserConnected;
+		return ejabberdApiService.getConnectedUsersNumber();
     }
 
+    //Numero dei messaggi pendenti per quell'utente
     @CrossOrigin
     @PostMapping("/getOfflineCount")
     public ResponseOfflineCount getOfflineCount(@RequestBody GetOfflineCount getOfflineCount) throws ExceptionGeneric, IOException{
