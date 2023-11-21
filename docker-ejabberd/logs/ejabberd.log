@@ -2003,3 +2003,13 @@
                          {<<"host">>,<<"localhost">>},
                          {<<"password">>,<<"bob">>}] from ::ffff:192.168.65.1:47784
 2023-11-20 15:31:27.132535+00:00 [info] <0.1932.0>@ejabberd_c2s:process_terminated/2:295 (tcp|<0.1932.0>) Closing c2s session for admin@localhost/xmppServices: Stream reset by peer
+2023-11-20 16:23:45.311444+00:00 [notice] <0.70.0> SIGTERM received - shutting down
+
+2023-11-20 16:23:45.315864+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:5222 for ejabberd_c2s
+2023-11-20 16:23:45.316333+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TLS connections at [::]:5223 for ejabberd_c2s
+2023-11-20 16:23:45.316487+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:5269 for ejabberd_s2s_in
+2023-11-20 16:23:45.316590+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TLS connections at [::]:5443 for ejabberd_http
+2023-11-20 16:23:45.316899+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:5280 for ejabberd_http
+2023-11-20 16:23:45.317082+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting UDP connections at [::]:3478 for ejabberd_stun
+2023-11-20 16:23:45.317441+00:00 [info] <0.179.0>@ejabberd_listener:stop_listener/3:476 Stop accepting TCP connections at [::]:1883 for mod_mqtt
+2023-11-20 16:23:45.396509+00:00 [info] <0.179.0>@ejabberd_app:stop/1:112 ejabberd 23.10.0 is stopped in the node ejabberd@localhost
