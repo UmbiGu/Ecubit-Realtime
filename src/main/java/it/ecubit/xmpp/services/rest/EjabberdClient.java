@@ -63,8 +63,8 @@ public class EjabberdClient {
 
 	public List<User> getRegisterUsers() throws IOException {
 		Host h = new Host("localhost");
-		Call<List<User>> register = ejabberdApi.getUsers(h);
-		Response<List<User>> registerResponse = register.execute();
+		Call<List> register = ejabberdApi.getUsers(h);
+		Response<List> registerResponse = register.execute();
 		return registerResponse.body();
 	}
 
