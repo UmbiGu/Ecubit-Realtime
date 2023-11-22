@@ -44,11 +44,11 @@ public class EjabberdApiService {
         return EjabberdClient.getInstance(host).getRoomOccupants(getRoomOccupants);
     }
 
-    public String accountCheck(UserCheck userCheck) throws IOException {
+    public String accountCheck(UserCheck userCheck) throws IOException, ExceptionGeneric {
         return EjabberdClient.getInstance(host).accountCheck(userCheck);
     }
 
-    public String passwordCheck(User user) throws IOException {
+    public String passwordCheck(User user) throws ExceptionGeneric, IOException {
         return EjabberdClient.getInstance(host).passwordCheck(user);
     }
 

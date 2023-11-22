@@ -135,17 +135,20 @@ public class EjabberdClient {
 		return getRoomOccupantsResponse.body();
 	}
 
-	public String accountCheck(UserCheck userCheck) throws IOException{
+	public String accountCheck(UserCheck userCheck) throws IOException, ExceptionGeneric {
 		Call<String> userCheckApi = ejabberdApi.accountCheck(userCheck);
 		Response<String> userCheckResponse = userCheckApi.execute();
-		if (userCheckResponse.body().equals("0"))
-			System.out.println("User " + userCheck.getUser() + " exists!");
+		if (userCheckResponse.body().equals("1"))
+			throw new ExceptionGeneric("Utente non registrato");
 		return userCheckResponse.body();
 	}
 
-	public String passwordCheck(User user) throws IOException{
+	public String passwordCheck(User user) throws ExceptionGeneric, IOException{
 		Call<String> passwordCheckApi = ejabberdApi.passwordCheck(user);
 		Response<String> passwordCheckResponse = passwordCheckApi.execute();
+		if (passwordCheckResponse.body().equals("1")){
+			throw new ExceptionGeneric("Password errata");
+		}
 		return passwordCheckResponse.body();
 	}
 
