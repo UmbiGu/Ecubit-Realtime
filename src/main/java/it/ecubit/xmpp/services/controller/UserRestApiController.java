@@ -136,7 +136,7 @@ public class UserRestApiController {
     public String changePasswordUser(@RequestBody ChangePasswordUser changePasswordUser) throws ExceptionGeneric, IOException{
         return ejabberdApiService.changePasswordUser(changePasswordUser);
     }
-    
+
 
 //    @CrossOrigin
 //    @PostMapping(path = "/users/broadcast") // Map ONLY GET Requests
