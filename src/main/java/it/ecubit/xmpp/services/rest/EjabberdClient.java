@@ -13,6 +13,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import javax.jws.soap.SOAPBinding;
 import javax.sound.midi.SysexMessage;
 import java.io.IOException;
 import java.util.List;
@@ -35,6 +36,7 @@ public class EjabberdClient {
 			client = new EjabberdClient(host);
 		return client;
 	}
+
 	public List<UserInfo> connectedUsers() throws IOException {
 		Call<List<UserInfo>> userInfoList = ejabberdApi.getUserInfo();
 		Response<List<UserInfo>> response = userInfoList.execute();
@@ -61,8 +63,8 @@ public class EjabberdClient {
 
 	public List<User> getRegisterUsers() throws IOException {
 		Host h = new Host("localhost");
-		Call<List> register = ejabberdApi.getUsers(h);
-		Response<List> registerResponse = register.execute();
+		Call<List<User>> register = ejabberdApi.getUsers(h);
+		Response<List<User>> registerResponse = register.execute();
 		return registerResponse.body();
 	}
 
@@ -73,26 +75,24 @@ public class EjabberdClient {
 		return connectedUsersNumberBody;
 	}
 
-	public String banUser() throws IOException {
-		BanUser banU = new BanUser("ugo", "localhost", "Too much Spam");
-		Call<String> register = ejabberdApi.banUser(banU);
+	public String banUser(BanUser banUser) throws IOException {
+		Call<String> register = ejabberdApi.banUser(banUser);
 		Response<String> registerResponse = register.execute();
 		String registerBody = registerResponse.body();
 		System.out.println();
 		return registerBody;
 	}
 
-	public String deleteOldUsers() throws IOException {
-		DeleteOldUsers deleteOldUsers = new DeleteOldUsers( 1);
-		Call<String> register = ejabberdApi.deleteOldUsers(deleteOldUsers);
+	public String deleteOldUsers(DeleteOldUsers deleteTimeOldUsers) throws IOException {
+		Call<String> register = ejabberdApi.deleteOldUsers(deleteTimeOldUsers);
 		Response<String> registerResponse = register.execute();
 		String registerBody = registerResponse.body();
 		System.out.println();
 		return registerBody;
 	}
 
-	public GetLastActivity getLastActivity() throws IOException {
-		Call<GetLastActivity> getLastActivityCall = ejabberdApi.getLast(new GetLast("admin", "localhost"));
+	public GetLastActivity getLastActivity(GetLast getLastUser) throws IOException {
+		Call<GetLastActivity> getLastActivityCall = ejabberdApi.getLast(getLastUser);
 		Response<GetLastActivity> getLastActivityResponse = getLastActivityCall.execute();
 		GetLastActivity getLastActivity = getLastActivityResponse.body();
 		return getLastActivity;
@@ -106,17 +106,15 @@ public class EjabberdClient {
 		return offlineCountBody;
 	}
 
-	public String unregisterUser() throws IOException{
-		Unregister unregisterUsername = new Unregister("marco", "localhost");
-		Call<String> unregister = ejabberdApi.unregisterUser(unregisterUsername);
+	public String unregisterUser(Unregister unregisterUser) throws IOException{
+		Call<String> unregister = ejabberdApi.unregisterUser(unregisterUser);
 		Response<String> unregisterResponse = unregister.execute();
 		String unregisteredUser = unregisterResponse.body();
 		return unregisteredUser;
 	}
 
-	public String changePasswordUser() throws IOException{
-		ChangePasswordUser changePassword = new ChangePasswordUser("ugo", "localhost", "ugo1");
-		Call<String> passwordChange = ejabberdApi.changePassword(changePassword);
+	public String changePasswordUser(ChangePasswordUser changePasswordUser) throws IOException{
+		Call<String> passwordChange = ejabberdApi.changePassword(changePasswordUser);
 		Response<String> changePasswordResponse = passwordChange.execute();
 		String changePaswordUser = changePasswordResponse.body();
 		return changePaswordUser;

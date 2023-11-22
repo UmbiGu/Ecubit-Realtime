@@ -26,8 +26,7 @@ public interface EjabberdApi {
 
     @Headers({"Accept: application/json"})
     @POST("registered_users")
-    public Call<List> getUsers(@Body Host host);
-
+    public Call<List<User>> getUsers(@Body Host host);
 
     @GET("connected_users_number")
     public Call<NumUserConnected> getConnectedUsersNumber();
