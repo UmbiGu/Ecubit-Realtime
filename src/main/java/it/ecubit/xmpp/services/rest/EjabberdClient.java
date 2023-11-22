@@ -1,7 +1,7 @@
 package it.ecubit.xmpp.services.rest;
 
 import com.google.gson.Gson;
-import it.ecubit.xmpp.services.exception.ExceptionGeneric;
+import it.ecubit.xmpp.services.exception.BadRequestException;
 import it.ecubit.xmpp.services.rest.entity.*;
 import it.ecubit.xmpp.services.rest.entity.room.CreateRoom;
 import it.ecubit.xmpp.services.rest.entity.room.GetRoomOccupants;
@@ -13,8 +13,6 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import javax.jws.soap.SOAPBinding;
-import javax.sound.midi.SysexMessage;
 import java.io.IOException;
 import java.util.List;
 
@@ -44,7 +42,7 @@ public class EjabberdClient {
 		return userInfos;
 	}
 
-	public void registerUser(User user) throws ExceptionGeneric, IOException {
+	public void registerUser(User user) throws BadRequestException, IOException {
 		Call<String> register = ejabberdApi.registerUser(user);
 		register.enqueue(new Callback<String>() {
 			@Override
@@ -55,7 +53,7 @@ public class EjabberdClient {
 			}
 			@Override
 			public void onFailure(Call<String> call, Throwable t) {
-				t.addSuppressed(new ExceptionGeneric("Errore Generico"));
+				t.addSuppressed(new BadRequestException("Errore Generico"));
 				t.addSuppressed(new IOException("Errore boh"));
 			}
 		});
@@ -135,19 +133,19 @@ public class EjabberdClient {
 		return getRoomOccupantsResponse.body();
 	}
 
-	public String accountCheck(UserCheck userCheck) throws IOException, ExceptionGeneric {
+	public String accountCheck(UserCheck userCheck) throws IOException, BadRequestException {
 		Call<String> userCheckApi = ejabberdApi.accountCheck(userCheck);
 		Response<String> userCheckResponse = userCheckApi.execute();
 		if (userCheckResponse.body().equals("1"))
-			throw new ExceptionGeneric("Utente non registrato");
+			throw new BadRequestException("Utente non registrato");
 		return userCheckResponse.body();
 	}
 
-	public String passwordCheck(User user) throws ExceptionGeneric, IOException{
+	public String passwordCheck(User user) throws BadRequestException, IOException{
 		Call<String> passwordCheckApi = ejabberdApi.passwordCheck(user);
 		Response<String> passwordCheckResponse = passwordCheckApi.execute();
 		if (passwordCheckResponse.body().equals("1")){
-			throw new ExceptionGeneric("Password errata");
+			throw new BadRequestException("Password errata");
 		}
 		return passwordCheckResponse.body();
 	}

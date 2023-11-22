@@ -1,6 +1,6 @@
 package it.ecubit.xmpp.services.controller;
 
-import it.ecubit.xmpp.services.exception.ExceptionGeneric;
+import it.ecubit.xmpp.services.exception.BadRequestException;
 import it.ecubit.xmpp.services.rest.entity.*;
 import it.ecubit.xmpp.services.rest.entity.room.CreateRoom;
 import it.ecubit.xmpp.services.rest.entity.room.GetRoomOccupants;
@@ -34,7 +34,7 @@ public class UserRestApiController {
     // Registrazione di un utente
     @CrossOrigin
     @PostMapping("/registerUser")
-    public User registerUser(@RequestBody User user) throws ExceptionGeneric, IOException {
+    public User registerUser(@RequestBody User user) throws BadRequestException, IOException {
         ejabberdApiService.registerUser(user);
         return userService.addUser(user);
     }
@@ -56,84 +56,84 @@ public class UserRestApiController {
     // Numero dei messaggi pendenti per quell'utente
     @CrossOrigin
     @PostMapping("/getOfflineCount")
-    public ResponseOfflineCount getOfflineCount(@RequestBody GetOfflineCount getOfflineCount) throws ExceptionGeneric, IOException{
+    public ResponseOfflineCount getOfflineCount(@RequestBody GetOfflineCount getOfflineCount) throws BadRequestException, IOException{
         return ejabberdApiService.getOfflineCount(getOfflineCount);
     }
 
     // Creazione stanza
     @CrossOrigin
     @PostMapping("/createRoom")
-    public String createRoom(@RequestBody CreateRoom createRoom) throws ExceptionGeneric, IOException{
+    public String createRoom(@RequestBody CreateRoom createRoom) throws BadRequestException, IOException{
         return ejabberdApiService.createRoom(createRoom);
     }
 
     // Lista occupanti stanza
     @CrossOrigin
     @PostMapping("/getRoomOccupants")
-    public List<RoomOccupants> getRoomOccupants(@RequestBody GetRoomOccupants getRoomOccupants) throws ExceptionGeneric, IOException{
+    public List<RoomOccupants> getRoomOccupants(@RequestBody GetRoomOccupants getRoomOccupants) throws BadRequestException, IOException{
         return ejabberdApiService.getRoomOccupants(getRoomOccupants);
     }
 
     // Controllo dati account
     @CrossOrigin
     @PostMapping("/check_account")
-    public String accountCheck(@RequestBody UserCheck userCheck) throws ExceptionGeneric, IOException{
+    public String accountCheck(@RequestBody UserCheck userCheck) throws BadRequestException, IOException{
         return ejabberdApiService.accountCheck(userCheck);
     }
 
     // Controllo password
     @CrossOrigin
     @PostMapping("/check_password")
-    public String passwordCheck(@RequestBody User user) throws ExceptionGeneric, IOException{
+    public String passwordCheck(@RequestBody User user) throws BadRequestException, IOException{
         return ejabberdApiService.passwordCheck(user);
     }
 
     // Unban utente
     @CrossOrigin
     @PostMapping("/unban_ip")
-    public UnbanWrap unbanIp(@RequestBody UnbanIp unbanIp) throws ExceptionGeneric, IOException{
+    public UnbanWrap unbanIp(@RequestBody UnbanIp unbanIp) throws BadRequestException, IOException{
         return ejabberdApiService.unbanIp(unbanIp);
     }
 
     // Utenti connessi
     @CrossOrigin
     @GetMapping("/getConnectedUsers")
-    public List<UserInfo> getConnectedUsers() throws ExceptionGeneric, IOException{
+    public List<UserInfo> getConnectedUsers() throws BadRequestException, IOException{
         return ejabberdApiService.getConnectedUsers();
     }
 
     // Ban Utente
     @CrossOrigin
     @PostMapping("/ban_user")
-    public String banUser(@RequestBody BanUser banUser) throws ExceptionGeneric, IOException{
+    public String banUser(@RequestBody BanUser banUser) throws BadRequestException, IOException{
         return ejabberdApiService.banUser(banUser);
     }
 
     // Timeout account utente
     @CrossOrigin
     @PostMapping("/delete_old_users")
-    public String deleteOldUsers(@RequestBody DeleteOldUsers deleteOldUsers) throws ExceptionGeneric, IOException{
+    public String deleteOldUsers(@RequestBody DeleteOldUsers deleteOldUsers) throws BadRequestException, IOException{
         return ejabberdApiService.deleteOldUsers(deleteOldUsers);
     }
 
     // Ultima attività utente
     @CrossOrigin
     @PostMapping("/get_last")
-    public GetLastActivity getLastActivity(@RequestBody GetLast getLast) throws ExceptionGeneric, IOException{
+    public GetLastActivity getLastActivity(@RequestBody GetLast getLast) throws BadRequestException, IOException{
         return ejabberdApiService.getLastActivity(getLast);
     }
 
     //Unregister User
     @CrossOrigin
     @PostMapping("/unregister")
-    public String unregisterUser(@RequestBody Unregister unregister) throws ExceptionGeneric, IOException{
+    public String unregisterUser(@RequestBody Unregister unregister) throws BadRequestException, IOException{
         return ejabberdApiService.unregisterUser(unregister);
     }
 
     //Change Password User
     @CrossOrigin
     @PostMapping("/change_password")
-    public String changePasswordUser(@RequestBody ChangePasswordUser changePasswordUser) throws ExceptionGeneric, IOException{
+    public String changePasswordUser(@RequestBody ChangePasswordUser changePasswordUser) throws BadRequestException, IOException{
         return ejabberdApiService.changePasswordUser(changePasswordUser);
     }
 

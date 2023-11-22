@@ -1,7 +1,7 @@
 package it.ecubit.xmpp.services.service;
 
 
-import it.ecubit.xmpp.services.exception.ExceptionGeneric;
+import it.ecubit.xmpp.services.exception.BadRequestException;
 import it.ecubit.xmpp.services.rest.EjabberdClient;
 import it.ecubit.xmpp.services.rest.entity.*;
 import it.ecubit.xmpp.services.rest.entity.room.CreateRoom;
@@ -20,7 +20,7 @@ public class EjabberdApiService {
     @Value("${xmpp.ejabberd.api}")
     String host;
 
-    public void registerUser(User user) throws IOException, ExceptionGeneric {
+    public void registerUser(User user) throws IOException, BadRequestException {
         EjabberdClient.getInstance(host).registerUser(user);
     }
 
@@ -44,11 +44,11 @@ public class EjabberdApiService {
         return EjabberdClient.getInstance(host).getRoomOccupants(getRoomOccupants);
     }
 
-    public String accountCheck(UserCheck userCheck) throws IOException, ExceptionGeneric {
+    public String accountCheck(UserCheck userCheck) throws IOException, BadRequestException {
         return EjabberdClient.getInstance(host).accountCheck(userCheck);
     }
 
-    public String passwordCheck(User user) throws ExceptionGeneric, IOException {
+    public String passwordCheck(User user) throws BadRequestException, IOException {
         return EjabberdClient.getInstance(host).passwordCheck(user);
     }
 
