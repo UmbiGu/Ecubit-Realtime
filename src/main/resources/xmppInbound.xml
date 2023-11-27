@@ -13,7 +13,7 @@
 	http://www.springframework.org/schema/integration/xmpp
 	http://www.springframework.org/schema/integration/xmpp/spring-integration-xmpp.xsd">
 
-    <context:component-scan base-package="it.almaviva.nerds.services"/>
+    <context:component-scan base-package="it.ecubit.xmpp.services"/>
 
     <int:channel id="xmppInbound"/>
 

@@ -56,7 +56,7 @@ public class EjabberdApiService {
         return EjabberdClient.getInstance(host).unbanIp(unbanIp);
     }
 
-    public List<UserInfo> getConnectedUsers() throws IOException {
+    public List<UserInfo> getConnectedUsers() throws IOException, BadRequestException {
         return EjabberdClient.getInstance(host).connectedUsers();
     }
 

@@ -35,8 +35,12 @@ public class EjabberdClient {
 		return client;
 	}
 
-	public List<UserInfo> connectedUsers() throws IOException {
+	public List<UserInfo> connectedUsers() throws BadRequestException, IOException {
 		Call<List<UserInfo>> userInfoList = ejabberdApi.getUserInfo();
+		for (UserInfo userInfo : userInfoList.execute().body()){
+			if (userInfo.getJid().contains("admin"))
+				throw new BadRequestException("Nessun utente connesso.");
+		}
 		Response<List<UserInfo>> response = userInfoList.execute();
 		List<UserInfo> userInfos = response.body();
 		return userInfos;
