@@ -24,7 +24,7 @@ public class EjabberdApiService {
         EjabberdClient.getInstance(host).registerUser(user);
     }
 
-    public List<User> getUsers() throws IOException {
+    public List<User> getUsers() throws IOException, BadRequestException {
 		return EjabberdClient.getInstance(host).getRegisterUsers();
     }
 
@@ -68,7 +68,7 @@ public class EjabberdApiService {
         return EjabberdClient.getInstance(host).deleteOldUsers(deleteOldUsers);
     }
 
-    public GetLastActivity getLastActivity(GetLast getLast) throws IOException {
+    public GetLastActivity getLastActivity(GetLast getLast) throws IOException, BadRequestException {
         return EjabberdClient.getInstance(host).getLastActivity(getLast);
     }
 

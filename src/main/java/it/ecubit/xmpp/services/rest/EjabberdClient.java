@@ -63,10 +63,12 @@ public class EjabberdClient {
 		});
 	}
 
-	public List<User> getRegisterUsers() throws IOException {
+	public List<User> getRegisterUsers() throws IOException, BadRequestException {
 		Host h = new Host("localhost");
 		Call<List> register = ejabberdApi.getUsers(h);
 		Response<List> registerResponse = register.execute();
+		if (registerResponse.body().size() == 1)
+			throw new BadRequestException("Nessun utente registrato, oltre l'Admin.");
 		return registerResponse.body();
 	}
 
@@ -97,10 +99,12 @@ public class EjabberdClient {
 		return registerBody;
 	}
 
-	public GetLastActivity getLastActivity(GetLast getLastUser) throws IOException {
+	public GetLastActivity getLastActivity(GetLast getLastUser) throws IOException, BadRequestException {
 		Call<GetLastActivity> getLastActivityCall = ejabberdApi.getLast(getLastUser);
 		Response<GetLastActivity> getLastActivityResponse = getLastActivityCall.execute();
 		GetLastActivity getLastActivity = getLastActivityResponse.body();
+		if (getLastActivity == null)
+			throw new BadRequestException("Errore nella ricerca dell'ultima attività");
 		return getLastActivity;
 	}
 
