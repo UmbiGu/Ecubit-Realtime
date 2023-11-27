@@ -49,7 +49,7 @@ public class UserRestApiController {
     // Numero degli utenti connessi
     @CrossOrigin
     @GetMapping("/getConnectedUsersNumbers")
-    public NumUserConnected getConnectedUsersNumber() throws IOException {
+    public NumUserConnected getConnectedUsersNumber() throws BadRequestException, IOException {
         return ejabberdApiService.getConnectedUsersNumber();
     }
 

@@ -28,19 +28,19 @@ public class EjabberdApiService {
 		return EjabberdClient.getInstance(host).getRegisterUsers();
     }
 
-    public NumUserConnected getConnectedUsersNumber() throws IOException {
+    public NumUserConnected getConnectedUsersNumber() throws BadRequestException, IOException {
 		return EjabberdClient.getInstance(host).getConnectedUsersNumber();
     }
 
-    public ResponseOfflineCount getOfflineCount(GetOfflineCount getOfflineCount) throws IOException{
+    public ResponseOfflineCount getOfflineCount(GetOfflineCount getOfflineCount) throws IOException, BadRequestException {
 		return EjabberdClient.getInstance(host).getOfflineCount(getOfflineCount);
     }
 
-    public String createRoom(CreateRoom createRoom) throws IOException {
+    public String createRoom(CreateRoom createRoom) throws IOException, BadRequestException {
         return EjabberdClient.getInstance(host).createRoom(createRoom);
     }
 
-    public List<RoomOccupants> getRoomOccupants(GetRoomOccupants getRoomOccupants) throws IOException {
+    public List<RoomOccupants> getRoomOccupants(GetRoomOccupants getRoomOccupants) throws IOException, BadRequestException {
         return EjabberdClient.getInstance(host).getRoomOccupants(getRoomOccupants);
     }
 
@@ -52,7 +52,7 @@ public class EjabberdApiService {
         return EjabberdClient.getInstance(host).passwordCheck(user);
     }
 
-    public UnbanWrap unbanIp(UnbanIp unbanIp) throws IOException {
+    public UnbanWrap unbanIp(UnbanIp unbanIp) throws IOException, BadRequestException {
         return EjabberdClient.getInstance(host).unbanIp(unbanIp);
     }
 
@@ -60,11 +60,11 @@ public class EjabberdApiService {
         return EjabberdClient.getInstance(host).connectedUsers();
     }
 
-    public String banUser(BanUser banUser) throws IOException {
+    public String banUser(BanUser banUser) throws BadRequestException, IOException {
         return EjabberdClient.getInstance(host).banUser(banUser);
     }
 
-    public String deleteOldUsers(DeleteOldUsers deleteOldUsers) throws IOException {
+    public String deleteOldUsers(DeleteOldUsers deleteOldUsers) throws IOException, BadRequestException {
         return EjabberdClient.getInstance(host).deleteOldUsers(deleteOldUsers);
     }
 
@@ -72,11 +72,11 @@ public class EjabberdApiService {
         return EjabberdClient.getInstance(host).getLastActivity(getLast);
     }
 
-    public String unregisterUser(Unregister unregister) throws IOException {
+    public String unregisterUser(Unregister unregister) throws IOException, BadRequestException {
         return EjabberdClient.getInstance(host).unregisterUser(unregister);
     }
 
-    public String changePasswordUser(ChangePasswordUser changePasswordUser) throws IOException {
+    public String changePasswordUser(ChangePasswordUser changePasswordUser) throws IOException, BadRequestException {
         return EjabberdClient.getInstance(host).changePasswordUser(changePasswordUser);
     }
 }
